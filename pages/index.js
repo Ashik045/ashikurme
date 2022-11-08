@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Header from '../Components/Header/Header'
+import Navbar from '../Components/Navbar/Navbar'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -11,9 +13,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to the portfolio
-        </h1>
+        <Navbar />
+        <Header />
 
       </main>
 
