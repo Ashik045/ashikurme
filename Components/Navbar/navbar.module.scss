@@ -1,0 +1,53 @@
+// @import "path/to/hamburgers";
+.navbar {
+  height: 75px;
+  background-color: #0a192f;
+  color: white;
+  display: flex;
+  align-items: center;
+  .navbar_main {
+    width: 100%;
+    max-width: 1124px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 15% 80%;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+      cursor: pointer;
+      h3 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ccd6f6;
+      }
+
+      span {
+        text-transform: uppercase;
+        font-size: 11px;
+        color: #64ffda;
+        font-weight: 600;
+      }
+    }
+
+    .menus {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0px 15px;
+        cursor: pointer;
+        color: #ccd6f6;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #64ffda;
+        }
+      }
+    }
+  }
+}
