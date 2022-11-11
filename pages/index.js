@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import AboutMe from '../Components/AboutMe/AboutMe';
 import Header from '../Components/Header/Header';
 import Navbar from '../Components/Navbar/Navbar';
 import styles from '../styles/home.module.scss';
@@ -32,6 +33,7 @@ export default function Home() {
                 <main className="main">
                     <Navbar />
                     <Header />
+                    <AboutMe />
                 </main>
             )}
         </div>

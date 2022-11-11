@@ -11,11 +11,15 @@
   "dependencies": {
     "eslint": "^8.2.0",
     "eslint-config-next": "13.0.2",
-    "hamburgers": "^1.2.1",
+    "gsap": "^3.11.3",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.56.1"
+    "react-gsap": "^3.2.1",
+    "react-particles": "^2.5.3",
+    "react-type-animation": "^2.1.2",
+    "sass": "^1.56.1",
+    "tsparticles": "^2.5.3"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.5.4",
