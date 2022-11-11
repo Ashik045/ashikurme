@@ -1,0 +1,15 @@
+.projects {
+  background-color: #0a192f;
+  color: white;
+  z-index: 100;
+
+  .projects_main {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+}
