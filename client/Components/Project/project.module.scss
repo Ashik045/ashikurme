@@ -1,0 +1,15 @@
+.projectt {
+  .l_t_r {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .r_t_l {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: center;
+    align-items: center;
+  }
+}

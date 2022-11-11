@@ -1,3 +1,4 @@
+import axios from 'axios';
 import Head from 'next/head';
 import { useState } from 'react';
 import AboutMe from '../Components/AboutMe/AboutMe';
@@ -6,7 +7,7 @@ import Navbar from '../Components/Navbar/Navbar';
 import Projects from '../Components/Projects/Projects';
 import styles from '../styles/home.module.scss';
 
-export default function Home() {
+export default function Home({projects}) {
     const [loading, setLoading] = useState(false);
 
     // useEffect(() => {
@@ -35,9 +36,21 @@ export default function Home() {
                     <Navbar />
                     <Header />
                     <AboutMe />
-                    <Projects />
+                    <Projects projects={projects} />
                 </main>
             )}
         </div>
     );
+}
+
+export async function getStaticProps() {
+    const res = await axios.get('http://localhost:4000/api/projects/all')
+
+    const projects = await res.data.message;
+
+    return {
+        props: {
+            projects: projects,
+        }
+    }
 }
