@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 import profilePic from '../../images/up-dp-removebg-preview (3).jpg';
+import HeaderTitle from '../HeaderTitle/HeaderTitle';
 import styles from './aboutme.module.scss';
 
 function AboutMe() {
     return (
         <div className={styles.aboutme}>
+            <HeaderTitle title="About Me" />
             <div className={styles.aboutme_main}>
                 <Image
                     src={profilePic}

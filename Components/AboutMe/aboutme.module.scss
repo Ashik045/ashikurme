@@ -1,18 +1,19 @@
 .aboutme {
   background-color: #0a192f;
+  z-index: 100;
 
   .aboutme_main {
-    padding-top: 70px;
+    // padding-top: 70px;
     padding-bottom: 70px;
     width: 100%;
-    max-width: 1124px;
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
     padding-right: 10px;
     display: grid;
     grid-template-columns: 48% 48%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     .profileImg {

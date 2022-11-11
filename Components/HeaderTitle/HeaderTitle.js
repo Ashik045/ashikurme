@@ -1,18 +1,16 @@
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import React from 'react';
-import { Tween } from 'react-gsap';
+import styles from './headertitle.module.scss';
 
-function HeaderTitle() {
+function HeaderTitle({ title }) {
     return (
-        <ScrollTrigger start="-200px center" end="200px center" scrub={0.5} markers>
-            <Tween
-                to={{
-                    x: '300px',
-                }}
-            >
-                <div style={{ width: '100px', height: '100px', background: '#ccc' }} />
-            </Tween>
-        </ScrollTrigger>
+        <div className={styles.header_title}>
+            <h2>{title}</h2>
+
+            <div className={styles.box}>
+                <div className={styles.box1} />
+                <div className={styles.box2} />
+            </div>
+        </div>
     );
 }
 

@@ -1,10 +1,17 @@
 // @import "path/to/hamburgers";
 .navbar {
   height: 75px;
-  background-color: #0a192f;
+  background-color: #0a192fd0;
+  // background-color: #0b1a30f1;
   color: white;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
   .navbar_main {
     width: 100%;
     max-width: 1124px;

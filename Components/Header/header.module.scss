@@ -1,11 +1,13 @@
 .header {
   background-color: #0a192f;
   color: white;
-  margin-top: -18px;
+  padding-top: 90px;
   height: 550px;
+  z-index: 100;
+
   .header_main {
     width: 100%;
-    max-width: 1124px;
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
@@ -17,6 +19,12 @@
       font-size: 60px;
       margin-top: 0px;
       margin-bottom: 0px;
+    }
+
+    .name {
+      color: #ccd6f6;
+      font-size: 18px;
+      font-weight: bold;
     }
 
     p {

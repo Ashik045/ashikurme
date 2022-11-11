@@ -93,7 +93,7 @@ function Header() {
 
             {/*  */}
             <div className={styles.header_main}>
-                <p>Hi, my name is</p>
+                <p className={styles.name}>Hi, my name is</p>
                 <h1>Ashikur Islam.</h1>
                 <TypeAnimation
                     // Same String at the start will only be typed once, initially
