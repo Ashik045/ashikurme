@@ -1,7 +1,7 @@
-const { Router } = require('express');
+const express = require('express');
 const { createBlog } = require('../controllers/projectcontroller');
 
-const router = Router();
+const router = express.Router();
 
 router.post('/create', createBlog);
 

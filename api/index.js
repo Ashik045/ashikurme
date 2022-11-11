@@ -1,14 +1,14 @@
 // impor modules
 const express = require('express');
+const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
+const app = express();
+
 // internal imports
 const projects = require('./routes/projects');
-const blogs = require('./routes/blogs');
-
-//
-const app = express();
+// const blogs = require('./routes/blogs');
 
 // app setups
 app.use(cors());
@@ -18,10 +18,21 @@ app.use(express.json());
 dotenv.config();
 
 // database connection
+mongoose
+    .connect(process.env.MONGODB_CONNECTION_STRING, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => {
+        console.log('Mongodb connection established.');
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 
 // application routes
 app.use('/api/projects', projects);
-app.use('/api/blogs', blogs);
+// app.use('/api/blogs', blogs);
 
 // default routes
 app.use('/', (req, res) => {
