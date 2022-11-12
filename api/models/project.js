@@ -29,6 +29,10 @@ const projectSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    left: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 const ProjectModel = mongoose.model('Projects', projectSchema);

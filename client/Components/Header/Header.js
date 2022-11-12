@@ -1,24 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useCallback } from 'react';
-import Particles from 'react-particles';
+import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { loadFull } from 'tsparticles';
 import styles from './header.module.scss';
 
 function Header() {
-    const particlesInit = useCallback(async (engine) => {
-        console.log(engine);
-        await loadFull(engine);
-    }, []);
+    // const particlesInit = useCallback(async (engine) => {
+    //     console.log(engine);
+    //     await loadFull(engine);
+    // }, []);
 
-    const particlesLoaded = useCallback(async (container) => {
-        await console.log(container);
-    }, []);
+    // const particlesLoaded = useCallback(async (container) => {
+    //     await console.log(container);
+    // }, []);
 
     return (
         <div className={styles.header}>
             {/* <Particles options={options} init={customInit} /> */}
-            <Particles
+            {/* <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -89,7 +87,7 @@ function Header() {
                     },
                     detectRetina: true,
                 }}
-            />
+            /> */}
 
             {/*  */}
             <div className={styles.header_main}>
