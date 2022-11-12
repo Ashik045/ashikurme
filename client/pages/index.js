@@ -5,6 +5,7 @@ import AboutMe from '../Components/AboutMe/AboutMe';
 import Header from '../Components/Header/Header';
 import Navbar from '../Components/Navbar/Navbar';
 import Projects from '../Components/Projects/Projects';
+import Services from '../Components/Services/Services';
 import styles from '../styles/home.module.scss';
 
 export default function Home({projects}) {
@@ -37,6 +38,7 @@ export default function Home({projects}) {
                     <Header />
                     <AboutMe />
                     <Projects projects={projects} />
+                    <Services />
                 </main>
             )}
         </div>

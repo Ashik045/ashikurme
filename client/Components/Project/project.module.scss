@@ -21,16 +21,67 @@
 
   .l_t_r {
     display: grid;
-    grid-template-columns: 48% 48%;
-    justify-content: center;
+    grid-template-columns: 51% 45%;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 90px;
+
+    .project_img {
+      cursor: pointer;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .Tilt {
+      transition: all 0.2s ease;
+    }
+
+    .l_t_r_txt {
+      h2 {
+        color: #ccd6f6;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          color: #64ffda;
+        }
+      }
+
+      .iconss {
+        color: #ccd6f6;
+      }
+
+      p {
+        color: #ccd6f6;
+      }
+
+      .r_t_l_tools {
+        color: #64ffda;
+
+        span {
+          margin-right: 5px;
+        }
+      }
+    }
   }
 
   .r_t_l {
     display: grid;
-    grid-template-columns: 48% 48%;
-    justify-content: center;
+    grid-template-columns: 51% 45%;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 90px;
+    text-align: right;
+
+    .project_img {
+      cursor: pointer;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .Tilt {
+      transition: all 0.2s ease;
+    }
 
     .r_t_l_txt {
       h2 {
@@ -43,7 +94,19 @@
         }
       }
 
+      .iconss {
+        color: #ccd6f6;
+      }
+
+      p {
+        color: #ccd6f6;
+        text-align: left;
+      }
+
       .r_t_l_tools {
+        color: #64ffda;
+        text-align: right;
+
         span {
           margin-right: 5px;
         }

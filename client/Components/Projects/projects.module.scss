@@ -11,5 +11,18 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 50px;
+
+    .see_all_btn {
+      text-align: center;
+
+      button {
+        padding: 15px 25px;
+        border: none;
+        background-color: #64ffda;
+        border-radius: 3px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
   }
 }
