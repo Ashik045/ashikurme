@@ -18,7 +18,7 @@ function AboutMe() {
                 />
 
                 <div className={styles.text}>
-                    <h2>Hello, My name is Ashikur</h2>
+                    <h2>Hello, I'm Ashikur</h2>
                     <p>
                         I build things for web. I work with clients to identify their website goals
                         and work with them to find a solution that meets their needs. I am here to

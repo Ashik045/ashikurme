@@ -8,7 +8,7 @@ const app = express();
 
 // internal imports
 const projects = require('./routes/projects');
-// const blogs = require('./routes/blogs');
+const blogs = require('./routes/blogs');
 
 // app setups
 app.use(cors());
@@ -32,7 +32,7 @@ mongoose
 
 // application routes
 app.use('/api/projects', projects);
-// app.use('/api/blogs', blogs);
+app.use('/api/blogs', blogs);
 
 // default routes
 app.use('/', (req, res) => {

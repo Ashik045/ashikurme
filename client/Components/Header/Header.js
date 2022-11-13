@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import Image from 'next/image';
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import headerBg from '../../images/bg3.png';
 import styles from './header.module.scss';
 
 function Header() {
@@ -15,8 +17,8 @@ function Header() {
 
     return (
         <div className={styles.header}>
-            {/* <Particles options={options} init={customInit} /> */}
-            {/* <Particles
+            {/* <Particles options={options} init={customInit} />
+            <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -89,32 +91,36 @@ function Header() {
                 }}
             /> */}
 
-            {/*  */}
+            
             <div className={styles.header_main}>
-                <p className={styles.name}>Hi, my name is</p>
-                <h1>Ashikur Islam.</h1>
-                <TypeAnimation
-                    // Same String at the start will only be typed once, initially
-                    sequence={[
-                        'I am a fullstack developer.',
-                        1000,
-                        'I am a frontend expert.',
-                        1000,
-                        'I am a programmer.',
-                        1000,
-                    ]}
-                    speed={50} // Custom Speed from 1-99 - Default Speed: 40
-                    style={{ fontSize: '4em', color: '#ccd6f6', fontWeight: 'bold' }}
-                    wrapper="span" // Animation will be rendered as a <span>
-                    repeat={Infinity} // Repeat this Animation Sequence infinitely
-                />
+                <div className={styles.header_main_left}>
+                    <p className={styles.name}>Hi, my name is</p>
+                    <h1>Ashikur Islam.</h1>
+                    <TypeAnimation
+                        // Same String at the start will only be typed once, initially
+                        sequence={[
+                            'I am a fullstack developer.',
+                            1000,
+                            'I am a frontend expert.',
+                            1000,
+                            'I am a programmer.',
+                            1000,
+                        ]}
+                        speed={50} // Custom Speed from 1-99 - Default Speed: 40
+                        style={{ fontSize: '4em', color: '#ccd6f6', fontWeight: 'bold' }}
+                        wrapper="span" // Animation will be rendered as a <span>
+                        repeat={Infinity} // Repeat this Animation Sequence infinitely
+                    />
 
-                <p>
-                    I&apos;m a full-stack developer. I have a solid understanding of both front-end
-                    and back-end technologies and a good deal of experience developing web
-                    applications.
-                </p>
+                    <p>
+                        I&apos;m a full-stack developer. I have a solid understanding of both front-end
+                        and back-end technologies and a good deal of experience developing web
+                        applications.
+                    </p>
+                </div>
+
             </div>
+                <Image src={headerBg} className={styles.header_bg} />
         </div>
     );
 }
