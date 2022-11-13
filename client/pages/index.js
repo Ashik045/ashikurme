@@ -9,7 +9,7 @@ import Projects from '../Components/Projects/Projects';
 import Services from '../Components/Services/Services';
 import styles from '../styles/home.module.scss';
 
-export default function Home({projects}) {
+export default function Home({projects, blogs}) {
     const [loading, setLoading] = useState(false);
 
     // useEffect(() => {
@@ -40,7 +40,7 @@ export default function Home({projects}) {
                     <AboutMe />
                     <Projects projects={projects} />
                     <Services />
-                    <Blogs />
+                    <Blogs blogs={blogs} />
                 </main>
             )}
         </div>
@@ -49,12 +49,15 @@ export default function Home({projects}) {
 
 export async function getStaticProps() {
     const res = await axios.get('http://localhost:4000/api/projects/all')
+    const res2 = await axios.get('http://localhost:4000/api/blogs/all')
 
     const projects = await res.data.message;
+    const blogs = await res2.data.message;
 
     return {
         props: {
             projects: projects,
+            blogs: blogs,
         }
     }
 }

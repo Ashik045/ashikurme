@@ -14,10 +14,9 @@ function Projects({projects}) {
                 })}
 
                 <div className={styles.see_all_btn}>
-                <Link href="/projects">
-
-                    <button type='button' >See All Projects</button>
-                </Link>
+                    <Link href="/projects">
+                        <button type='button' >See All Projects</button>
+                    </Link>
                 </div>
             </div>
         </div>
