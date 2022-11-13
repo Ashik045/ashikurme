@@ -2,6 +2,7 @@ import axios from 'axios';
 import Head from 'next/head';
 import { useState } from 'react';
 import AboutMe from '../Components/AboutMe/AboutMe';
+import Blogs from '../Components/Blogs/Blogs';
 import Header from '../Components/Header/Header';
 import Navbar from '../Components/Navbar/Navbar';
 import Projects from '../Components/Projects/Projects';
@@ -39,6 +40,7 @@ export default function Home({projects}) {
                     <AboutMe />
                     <Projects projects={projects} />
                     <Services />
+                    <Blogs />
                 </main>
             )}
         </div>
