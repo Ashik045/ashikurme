@@ -1,0 +1,18 @@
+.about_page {
+  background-color: #0a192f;
+  .about_page_main {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -20px;
+
+    .skill_icon {
+      background-color: blue;
+      padding: 20px;
+      border-radius: 50%;
+    }
+  }
+}

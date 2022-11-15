@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from './navbar.module.scss';
 
@@ -26,16 +27,26 @@ function Navbar() {
             }}
         >
             <div className={styles.navbar_main}>
+                <Link href="/">
                 <div className={styles.brand}>
                     <h3>Ashikur</h3>
                     <span>I&apos;m a programmer</span>
                 </div>
+                </Link>
 
                 <div className={styles.menus}>
-                    <p>Home</p>
-                    <p>About</p>
-                    <p>Portfolio</p>
-                    <p>Contact</p>
+                    <Link href="/">
+                        <p>Home</p>
+                    </Link>
+                    <Link href="/about">
+                        <p>About</p>
+                    </Link>
+                    <Link href="/projects">
+                        <p>Portfolio</p>
+                    </Link>
+                    <Link href="/blogs">
+                        <p>Blogs</p>
+                    </Link>
                 </div>
 
                 {/* <div className="toggler">

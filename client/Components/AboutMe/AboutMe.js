@@ -4,11 +4,11 @@ import profilePic from '../../images/up-dp-removebg-preview (3).jpg';
 import HeaderTitle from '../HeaderTitle/HeaderTitle';
 import styles from './aboutme.module.scss';
 
-function AboutMe() {
+function AboutMe({pt}) {
     return (
-        <div className={styles.aboutme}>
-            <HeaderTitle title="About Me" />
-            <div className={styles.aboutme_main}>
+        <div className={styles.aboutme} style={{paddingTop: pt ? `${pt}` : '0px'}}>
+            <HeaderTitle title="About Me"  />
+            <div className={styles.aboutme_main} >
                 <Image
                     src={profilePic}
                     className={styles.profileImg}
