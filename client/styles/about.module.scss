@@ -1,6 +1,6 @@
 .about_page {
   background-color: #0a192f;
-  .icons {
+  .main_sec {
     width: 100%;
     max-width: 1024px;
     margin-left: auto;
@@ -8,61 +8,106 @@
     padding-left: 10px;
     padding-right: 10px;
     margin-top: -20px;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-gap: 20px;
-    margin-bottom: 30px;
 
-    .icon_div {
-      display: flex;
-      align-items: center;
+    .icons {
+      width: 95%;
+      margin-left: auto;
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-gap: 20px;
+      margin-bottom: 30px;
 
-      .reactjs {
-        background-color: #5adafd;
-        padding: 5px;
-        border-radius: 50%;
-        margin-right: 7px;
+      .icon_div {
+        display: flex;
+        align-items: center;
+
+        .reactjs {
+          background-color: #5adafd;
+          padding: 5px;
+          border-radius: 50%;
+          margin-right: 7px;
+        }
+
+        .nextjs {
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          margin-right: 7px;
+        }
+
+        .css {
+          margin-right: 7px;
+        }
+
+        .html {
+          margin-right: 7px;
+        }
+
+        .bootstap {
+          margin-right: 7px;
+        }
+
+        .mui {
+          margin-right: 7px;
+        }
+
+        .node {
+          margin-right: 7px;
+        }
+
+        .express {
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          margin-right: 7px;
+        }
+
+        .mongodb {
+          background-color: rgb(41, 40, 40);
+          padding: 1px;
+          border-radius: 50%;
+          margin-right: 7px;
+        }
+
+        h3 {
+          color: #ccd6f6;
+        }
       }
+    }
 
-      .nextjs {
-        background-color: white;
-        padding: 5px;
-        border-radius: 50%;
-        margin-right: 7px;
-      }
-
-      .css {
-        margin-right: 7px;
-      }
-
-      .html {
-        margin-right: 7px;
-      }
-
-      .bootstap {
-        margin-right: 7px;
-      }
-
-      .node {
-        margin-right: 7px;
-      }
-
-      .express {
-        background-color: white;
-        padding: 5px;
-        border-radius: 50%;
-        margin-right: 7px;
-      }
-
-      .mongodb {
-        background-color: #00ed64;
-        padding: 1px;
-        border-radius: 50%;
-        margin-right: 7px;
-      }
-
-      h3 {
+    .others {
+      width: 95%;
+      margin-left: auto;
+      h2 {
         color: #ccd6f6;
+      }
+
+      .other_icons {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-gap: 20px;
+
+        .other_icon_div {
+          display: flex;
+          align-items: center;
+
+          .round {
+            background-color: white;
+            padding: 5px;
+            border-radius: 50%;
+          }
+
+          // .ot_icon {
+          //   background-color: white;
+          //   border-radius: 50%;
+          //   overflow-x: hidden;
+          // }
+
+          h3 {
+            color: #ccd6f6;
+            text-transform: capitalize;
+          }
+        }
       }
     }
   }
