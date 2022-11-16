@@ -11,7 +11,7 @@ const Project = ({project}) => {
         {project.left ? (
             <div className={styles.l_t_r}>
                 <div className={styles.l_t_r_txt}>
-                    <Link href={project._id}>
+                    <Link href={`/projects/${project._id}`}>
                         <h2>{project.title}</h2>
                     </Link>
                     <span className={styles.iconss}>
@@ -31,7 +31,7 @@ const Project = ({project}) => {
                     </p>
                 </div>
                 
-                <Link href={project._id}>
+                <Link href={`/projects/${project._id}`}>
                     <Tilt className={styles.Tilt} options={{ max : 25 }} >
                         <Image src={project.images[0]} className={styles.project_img} alt="website" height={370} width={500} layout="responsive" />
                     </Tilt>
@@ -39,14 +39,14 @@ const Project = ({project}) => {
             </div>
         ): (
             <div className={styles.r_t_l}>
-            <Link href={project._id}>
+            <Link href={`/projects/${project._id}`}>
                 <Tilt className={styles.Tilt} options={{ max : 25 }} >
                 <Image src={project.images[0]} className={styles.project_img} alt="website" height={370} width={500} layout="responsive" />
                 </Tilt>
             </Link>
 
                 <div className={styles.r_t_l_txt}>
-                    <Link href={project._id}>
+                    <Link href={`/projects/${project._id}`}>
                         <h2>{project.title}</h2>
                     </Link>
                     <span className={styles.iconss}>
