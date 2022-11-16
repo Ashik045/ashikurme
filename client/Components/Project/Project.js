@@ -11,12 +11,14 @@ const Project = ({project}) => {
         {project.left ? (
             <div className={styles.l_t_r}>
                 <div className={styles.l_t_r_txt}>
-                    <h2>{project.title}</h2>
+                    <Link href={project._id}>
+                        <h2>{project.title}</h2>
+                    </Link>
                     <span className={styles.iconss}>
-                        <Link href={project.githubLink}>
+                        <Link href={project.githubLink} target="_blank">
                             <FaGithub className={styles.icon} size={23} />
                         </Link>
-                        <Link href={project.liveLink}>
+                        <Link href={project.liveLink} target="_blank">
                             <FaExternalLinkAlt size={20} className={styles.icon2} />
                         </Link>
                     </span>
@@ -29,23 +31,29 @@ const Project = ({project}) => {
                     </p>
                 </div>
                 
-                <Tilt className={styles.Tilt} options={{ max : 25 }} >
-                <Image src={project.images[0]} className={styles.project_img} alt="website" height={370} width={500} layout="responsive" />
-                </Tilt>
+                <Link href={project._id}>
+                    <Tilt className={styles.Tilt} options={{ max : 25 }} >
+                        <Image src={project.images[0]} className={styles.project_img} alt="website" height={370} width={500} layout="responsive" />
+                    </Tilt>
+                </Link>
             </div>
         ): (
             <div className={styles.r_t_l}>
+            <Link href={project._id}>
                 <Tilt className={styles.Tilt} options={{ max : 25 }} >
                 <Image src={project.images[0]} className={styles.project_img} alt="website" height={370} width={500} layout="responsive" />
                 </Tilt>
+            </Link>
 
                 <div className={styles.r_t_l_txt}>
-                    <h2>{project.title}</h2>
+                    <Link href={project._id}>
+                        <h2>{project.title}</h2>
+                    </Link>
                     <span className={styles.iconss}>
-                        <Link href={project.githubLink}>
+                        <Link href={project.githubLink} target="_blank">
                             <FaGithub className={styles.icon} size={23} />
                         </Link>
-                        <Link href={project.liveLink}>
+                        <Link href={project.liveLink} target="_blank">
                             <FaExternalLinkAlt size={20} className={styles.icon2} />
                         </Link>
                     </span>
