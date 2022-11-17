@@ -14,8 +14,34 @@
     justify-content: space-between;
 
     .project_detail_left {
-      .project_images {
-        margin-bottom: 30px;
+      .project_detail_slider {
+        position: relative;
+        margin-bottom: 80px;
+
+        .project_images {
+          margin-bottom: 30px;
+          border-radius: 2px;
+          height: 450px;
+          overflow-y: hidden;
+        }
+
+        .slider_btm_imgs {
+          position: absolute;
+          bottom: -30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+
+          .slider_btm_img {
+            margin: 0px 5px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 6px;
+          }
+        }
       }
 
       h2 {

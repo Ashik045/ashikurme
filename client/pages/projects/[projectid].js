@@ -2,13 +2,15 @@ import axios from 'axios';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { MdDoneAll } from "react-icons/md";
 import Navbar from '../../Components/Navbar/Navbar';
 import styles from '../../styles/projectdetail.module.scss';
 
 const projectDetail = ({project}) => {
+  const [sliderNum, setSliderNum] = useState(0)
+  
   return (
     <div className={styles.project}>
         <Head>
@@ -23,11 +25,11 @@ const projectDetail = ({project}) => {
         <div className={styles.project_detail_main}>
           <div className={styles.project_detail_left}>
             <div className={styles.project_detail_slider}>
-              <Image src={project.images[0]} alt="website" className={styles.project_images} width={650} height={450} layout="responsive" />
+              <Image src={project.images[sliderNum]} alt="website" className={styles.project_images} width={650} height={450} layout="responsive" />
 
-              <div className={styles.slider_btm_img}>
+              <div className={styles.slider_btm_imgs}>
                 {project.images.map((img, i) => {
-                  return <Image src={img} alt="project img" height={70} width={100} />
+                  return <Image key={i} src={img} onClick={() => setSliderNum(i)} alt="project img" className={styles.slider_btm_img} height={50} width={90} />
                 })}
               </div>
             </div>
