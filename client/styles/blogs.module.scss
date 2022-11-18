@@ -1,0 +1,61 @@
+.blog_page {
+  background-color: #0a192f;
+
+  .blog_page_main {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: 30% 68%;
+    gap: 20px;
+    justify-content: space-between;
+    // align-items: center;
+
+    .left {
+      .form {
+        padding-bottom: 20px;
+        .form_div {
+          background-color: #ccd6f6;
+          width: 85%;
+          padding: 3px;
+          display: flex;
+          align-items: center;
+          border-radius: 3px;
+          position: relative;
+
+          input {
+            border: none;
+            outline: none;
+            padding: 5px 10px;
+            font-size: 15px;
+            background-color: #ccd6f6;
+          }
+
+          .submit_icon {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .tags {
+        color: #ccd6f6;
+      }
+    }
+
+    .right {
+      display: grid;
+      grid-template-columns: 49% 49%;
+      gap: 25px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

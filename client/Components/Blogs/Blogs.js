@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaArrowRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import HeaderTitle from '../HeaderTitle/HeaderTitle';
 import styles from './blogs.module.scss';
@@ -8,9 +7,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import Image from 'next/image';
 import Link from 'next/link';
 import { Autoplay, Pagination } from "swiper";
+import Blog from '../BLog/Blog';
 
 const Blogs = ({blogs}) => {
   return (
@@ -47,13 +46,7 @@ const Blogs = ({blogs}) => {
             {blogs.map((blog) => {
                 return (
                     <SwiperSlide key={blog._id} >
-                        <div className={styles.blog_component}>
-                            <Image src={blog.image} className={styles.image} alt="web blogs" width={400} height={300} layout="responsive" objectFit='cover' />
-                            <h2>{blog.title}</h2>
-                            <p>{blog.desc}</p>
-
-                            <p className={styles.continue_reading} >Continue Reading <FaArrowRight className={styles.continue_reading_icon} /></p>
-                        </div>
+                        <Blog blog={blog} />
                     </SwiperSlide>
                 )
             })}

@@ -1,0 +1,50 @@
+.blog_component {
+  .image {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    object-fit: cover;
+
+    &:hover {
+      scale: 1.03;
+    }
+  }
+
+  h2 {
+    color: #ccd6f6;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    margin-bottom: 0px;
+
+    &:hover {
+      color: #64ffda;
+    }
+  }
+
+  p {
+    color: #ccd6f6b0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-line-orient: vertical;
+  }
+
+  .continue_reading {
+    display: flex;
+    align-items: center;
+    color: #64ffda;
+    cursor: pointer;
+    padding-bottom: 5px;
+
+    .continue_reading_icon {
+      margin-left: 3px;
+      font-size: 14px;
+      margin-top: 3px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .continue_reading:hover .continue_reading_icon {
+    margin-left: 8px;
+  }
+}
