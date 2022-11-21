@@ -5,12 +5,28 @@ import Blog from '../../Components/BLog/Blog'
 import Navbar from '../../Components/Navbar/Navbar'
 import styles from '../../styles/blogs.module.scss'
 
-const index = ({blogs}) => {
+const index = ({blog}) => {
+  const [blogs, setBlogs] = useState(blog);
+  const [filterBlogs, setFilterBlogs] = useState([]);
   const [input, setInput] = useState('')
+  console.log(blogs);
   
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(input);
+    if (input?.length > 0) {
+      const filterData = blogs?.filter((blog) => {
+        Object.values(blog.title).join('').toLowerCase().includes(input?.toLowerCase())
+      })
+      setFilterBlogs(filterData)
+      console.log(input);
+    } else {
+      setFilterBlogs(blogs)
+    }
+
+    // 
+    //   if (input?.length === 0) {
+    //     setFilterBlogs(blogs);
+    // }
   }
   return (
     <div className={styles.blog_page}>
@@ -27,21 +43,25 @@ const index = ({blogs}) => {
               </form>
             </div>
 
-            <div className={styles.tags}>
-              <h3>Tags:</h3>
-              <span>Website</span>
-              <span>Javascript</span>
-              <span>Security</span>
-              <span>Website</span>
-              <span>CSS</span>
+            <div className={styles.tag_sec}>
+              <h2>Tags:</h2>
+              <div className={styles.tags}>
+                <span>Website</span>
+                <span>Javascript</span>
+                <span>Security</span>
+                <span>Website</span>
+                <span>CSS</span>
+              </div>
             </div>
           </div>
 
           <div className={styles.right}>
-            {blogs.map((blog) => {
+            {blogs?.map((blog) => {
               return <Blog key={blog._id} blog={blog} />
             })}
           </div>
+
+          
         </div>
     </div>
   )
@@ -56,7 +76,7 @@ export async function getStaticProps() {
 
   return {
       props: {
-          blogs: blogs,
+          blog: blogs,
       }
   }
 }

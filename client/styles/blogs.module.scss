@@ -41,12 +41,34 @@
             top: 5px;
             right: 10px;
             cursor: pointer;
+            color: rgb(37, 37, 37);
           }
         }
       }
 
-      .tags {
-        color: #ccd6f6;
+      .tag_sec {
+        h2 {
+          color: #ccd6f6;
+        }
+
+        .tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          span {
+            padding: 5px 10px;
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: #64ffda;
+              color: black;
+            }
+          }
+        }
       }
     }
 
