@@ -75,8 +75,9 @@ const projectDetail = ({project}) => {
   )
 }
 
-export default projectDetail
+export default projectDetail;
 
+// 
 export async function getStaticPaths() {
   const res = await axios.get('http://localhost:4000/api/projects/all')
   const datas = await res.data.message;
