@@ -10,6 +10,7 @@ const Blog = ({blog}) => {
         <h2>{blog.title}</h2>
         <p>{blog.desc}</p>
 
+      {/* go to details page */}
         <p className={styles.continue_reading} >Continue Reading <FaArrowRight className={styles.continue_reading_icon} /></p>
     </div>
   )

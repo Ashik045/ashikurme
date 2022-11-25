@@ -60,8 +60,6 @@ const index = ({blog}) => {
               return <Blog key={blog._id} blog={blog} />
             })}
           </div>
-
-          
         </div>
     </div>
   )
