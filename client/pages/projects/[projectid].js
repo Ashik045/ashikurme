@@ -27,6 +27,7 @@ const projectDetail = ({project}) => {
             <div className={styles.project_detail_slider}>
               <Image src={project.images[sliderNum]} alt="website" className={styles.project_images} width={650} height={450} layout="responsive" />
 
+              {/* imgs */}
               <div className={styles.slider_btm_imgs}>
                 {project.images.map((img, i) => {
                   return <Image key={i} src={img} onClick={() => setSliderNum(i)} alt="project img" className={styles.slider_btm_img} height={50} width={90} />
