@@ -47,6 +47,7 @@ export default function Home({projects, blogs}) {
     );
 }
 
+// fetch the data from the server
 export async function getStaticProps() {
     const res = await axios.get('http://localhost:4000/api/projects/all')
     const res2 = await axios.get('http://localhost:4000/api/blogs/all')
