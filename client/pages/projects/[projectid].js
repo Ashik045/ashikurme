@@ -78,7 +78,7 @@ const projectDetail = ({project}) => {
 
 export default projectDetail;
 
-// 
+// static site generation
 export async function getStaticPaths() {
   const res = await axios.get('http://localhost:4000/api/projects/all')
   const datas = await res.data.message;
