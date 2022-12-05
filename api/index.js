@@ -34,7 +34,7 @@ mongoose
 app.use('/api/projects', projects);
 app.use('/api/blogs', blogs);
 
-// default route
+// default route for home page
 app.use('/', (req, res) => {
     res.status(200).json({
         message: 'server running',
