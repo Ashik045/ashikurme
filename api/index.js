@@ -30,7 +30,7 @@ mongoose
         console.log(err);
     });
 
-// application routes
+// application routes(updating)
 app.use('/api/projects', projects);
 app.use('/api/blogs', blogs);
 

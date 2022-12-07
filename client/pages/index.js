@@ -29,7 +29,7 @@ export default function Home({projects, blogs}) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-    {/* dynamically show the beautiful eye loading animation */}
+    {/* show the beautiful eye loading animation */}
             {loading ? (
                 <div className={styles.loader_main}>
                     <span className={styles.loader} />
