@@ -6,7 +6,7 @@ import styles from './aboutme.module.scss';
 
 function AboutMe({pt}) {
     return (
-        <div className={styles.aboutme} style={{paddingTop: pt ? `${pt}` : '0px'}}>
+        <div className={styles.aboutme} style={{paddingTop: pt ? `${pt}` : '0px'}}> // dynamically generated set the paddingTop property
             <HeaderTitle title="About Me"  />
             <div className={styles.aboutme_main} >
                 <Image

@@ -54,7 +54,7 @@ app.use((req, res, next) => {
     });
 });
 
-// application run
+// application runing port
 app.listen(process.env.APPLICATION_PORT || 4000, () => {
     console.log(`Application running on port ${process.env.APPLICATION_PORT}`);
 });

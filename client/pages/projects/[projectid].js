@@ -95,6 +95,7 @@ export async function getStaticPaths() {
   }
 }
 
+// fetch the project data by its projectid
 export async function getStaticProps(context) {
   const params = context.params;
 
