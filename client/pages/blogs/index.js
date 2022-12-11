@@ -9,7 +9,6 @@ const index = ({blog}) => {
   const [blogs, setBlogs] = useState(blog);
   const [filterBlogs, setFilterBlogs] = useState([]);
   const [input, setInput] = useState('')
-  console.log(blogs);
   
   const handleSubmit = (e) => {
     e.preventDefault()
