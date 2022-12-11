@@ -41,7 +41,7 @@ app.use('/', (req, res) => {
     });
 });
 
-// error handlers
+// default error handlers
 app.use((err, req, res, next) => {
     res.status(500).json({
         error: err,
