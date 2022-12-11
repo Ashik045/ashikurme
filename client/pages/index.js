@@ -12,6 +12,7 @@ import styles from '../styles/home.module.scss';
 export default function Home({projects, blogs}) {
     const [loading, setLoading] = useState(false);
 
+    // eye loading effect
     // useEffect(() => {
     //     setLoading(true);
     //     const timer = setTimeout(() => {
