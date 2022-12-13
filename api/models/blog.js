@@ -30,12 +30,15 @@ const blogSchema = mongoose.Schema(
             type: String,
             required: true,
         },
+        tags: {
+            type: Array,
+        },
         featured: {
             type: Boolean,
             default: false,
         },
     },
-    { timestamps: true },
+    { timestamps: true }
 );
 
 const BlogModel = mongoose.model('Blogs', blogSchema);

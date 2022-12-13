@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Head from 'next/head';
+import Image from 'next/image';
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import styles from '../../styles/blogdetail.module.scss';
@@ -18,7 +19,8 @@ const blogDetail = ({blogDetail}) => {
         <Navbar />
 
         <div className={styles.project_detail_main}>
-
+          <h1>{blogDetail.title}</h1>
+          <Image src={blogDetail.image} height={400} width={700} objectFit="cover" />
         </div>
         </div>
     </div>
