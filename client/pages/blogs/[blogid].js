@@ -6,7 +6,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import styles from '../../styles/blogdetail.module.scss';
 
 const blogDetail = ({blogDetail}) => {
-  console.log(blogDetail);
+  // console.log(blogDetail);
   return (
     <div className={styles.blogdetail_page}>
       <Head>
@@ -15,12 +15,26 @@ const blogDetail = ({blogDetail}) => {
             <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.project_detail}>
+      <div className={styles.blog_detail}>
         <Navbar />
 
-        <div className={styles.project_detail_main}>
-          <h1>{blogDetail.title}</h1>
-          <Image src={blogDetail.image} height={400} width={700} objectFit="cover" />
+        <div className={styles.blog_detail_main}>
+          <div className={styles.main_blogdetail}>
+            <h1>{blogDetail.title}</h1>
+            <Image src={blogDetail.image} className={styles.blogdetail_img} height={400} width={700} layout='responsive' />
+
+            <p>{blogDetail.desc}</p>
+
+            <h2>{blogDetail.subtitle1}</h2>
+            <p>{blogDetail.subdesc1}</p>
+
+            <h2>{blogDetail.subtitle2}</h2>
+            <p>{blogDetail.subdesc2}</p>
+          </div>
+
+          <div className={styles.blogdetail_right}>
+            <h2>You might also like</h2>
+          </div>
         </div>
         </div>
     </div>
