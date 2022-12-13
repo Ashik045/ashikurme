@@ -3,10 +3,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
+import OtherBlog from '../../Components/OtherBlog/OtherBlog';
 import styles from '../../styles/blogdetail.module.scss';
 
-const blogDetail = ({blogDetail}) => {
-  // console.log(blogDetail);
+const blogDetail = ({blogDetail, otherBlogs}) => {
+  // console.log(otherBlogs);
   return (
     <div className={styles.blogdetail_page}>
       <Head>
@@ -21,7 +22,7 @@ const blogDetail = ({blogDetail}) => {
         <div className={styles.blog_detail_main}>
           <div className={styles.main_blogdetail}>
             <h1>{blogDetail.title}</h1>
-            <Image src={blogDetail.image} className={styles.blogdetail_img} height={400} width={700} layout='responsive' />
+            <Image src={blogDetail.image} className={styles.blogdetail_img} height={400} width={700} layout='responsive' alt='blogs' />
 
             <p>{blogDetail.desc}</p>
 
@@ -34,6 +35,10 @@ const blogDetail = ({blogDetail}) => {
 
           <div className={styles.blogdetail_right}>
             <h2>You might also like</h2>
+
+            {otherBlogs.filter((blog) => blog._id !== blogDetail._id).slice(0, 3).map((blogg) => {
+              return <OtherBlog key={blogg._id} blog={blogg} />
+            })}
           </div>
         </div>
         </div>
@@ -67,12 +72,15 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const params = context.params
   const res = await axios.get(`http://localhost:4000/api/blogs/${params.blogid}`)
+  const res2 = await axios.get(`http://localhost:4000/api/blogs/all`)
 
   const data = await res.data.message;
+  const data2 = await res2.data.message;
 
   return {
     props: {
       blogDetail: data,
+      otherBlogs: data2,
     }
   }
 }

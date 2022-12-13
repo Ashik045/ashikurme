@@ -1,0 +1,34 @@
+.other_blog {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  gap: 10px;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+  .other_blog_img {
+    cursor: pointer;
+  }
+
+  .other_blog_text {
+    h3 {
+      color: #ccd6f6;
+      margin-top: -5px;
+      margin-bottom: -10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #64ffda;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

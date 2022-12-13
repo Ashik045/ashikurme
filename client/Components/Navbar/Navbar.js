@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import styles from './navbar.module.scss';
 
 function Navbar() {
     const [srlHeight, setSrlHeight] = useState(false);
+    const router = useRouter()
 
     if (typeof window !== 'undefined') {
         // eslint-disable-next-line func-names
@@ -36,16 +38,16 @@ function Navbar() {
 
                 <div className={styles.menus}>
                     <Link href="/">
-                        <p>Home</p>
+                        <p className={router.pathname === '/' ? `${styles.active}` : ''}>Home</p>
                     </Link>
                     <Link href="/about">
-                        <p>About</p>
+                        <p className={router.pathname === '/about' ? `${styles.active}` : ''}>About</p>
                     </Link>
                     <Link href="/projects">
-                        <p>Portfolio</p>
+                        <p className={router.pathname === '/projects' ? `${styles.active}` : ''}>Portfolio</p>
                     </Link>
                     <Link href="/blogs">
-                        <p>Blogs</p>
+                        <p className={router.pathname === '/blogs' ? `${styles.active}` : ''}>Blogs</p>
                     </Link>
                 </div>
 

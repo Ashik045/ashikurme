@@ -11,7 +11,7 @@
       padding-top: 100px;
       padding-bottom: 30px;
       display: grid;
-      grid-template-columns: 72% 25%;
+      grid-template-columns: 71% 27%;
       justify-content: space-between;
 
       .main_blogdetail {
@@ -40,8 +40,30 @@
       }
 
       .blogdetail_right {
+        padding-top: 60px;
         color: #ccd6f6;
-        text-transform: capitalize;
+
+        h2 {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blogdetail_page {
+    .blog_detail {
+      .blog_detail_main {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+
+        .blogdetail_right {
+          padding-top: 20px;
+        }
       }
     }
   }
