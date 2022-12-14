@@ -1,4 +1,5 @@
 .about {
+  overflow-x: hidden;
   .about_page {
     background-color: #0a192f;
     .main_sec {
@@ -6,8 +7,8 @@
       max-width: 1024px;
       margin-left: auto;
       margin-right: auto;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
       margin-top: -20px;
 
       .icons {
@@ -81,6 +82,7 @@
         margin-left: auto;
         h2 {
           color: #ccd6f6;
+          margin-bottom: 5px;
         }
 
         .other_icons {
@@ -108,6 +110,67 @@
               color: #ccd6f6;
               text-transform: capitalize;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about {
+    .about_page {
+      .main_sec {
+        .icons {
+          width: 97%;
+          margin-left: auto;
+          display: grid;
+          grid-template-columns: 25% 25% 25% 25%;
+          grid-gap: 14px;
+        }
+
+        .others {
+          width: 97%;
+          .other_icons {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-gap: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    .about_page {
+      .main_sec {
+        .icons {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 32% 32% 32%;
+          grid-gap: 10px;
+
+          .icon_div {
+            .javascript {
+              height: 50px;
+              width: 50px;
+            }
+            .skill_icons {
+              height: 35px;
+              width: 35px;
+            }
+          }
+        }
+
+        .others {
+          width: 100%;
+
+          .other_icons {
+            display: grid;
+            grid-template-columns: 32% 32% 32%;
+            grid-gap: 10px;
           }
         }
       }

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 import AboutMe from '../../Components/AboutMe/AboutMe';
+import Footer from '../../Components/Footer/Footer';
 import HeaderTitle from '../../Components/HeaderTitle/HeaderTitle';
 import Navbar from '../../Components/Navbar/Navbar';
 import Services from '../../Components/Services/Services';
@@ -27,50 +28,50 @@ const other_icons = [
         id: 1,
         icon: github,
         name: 'github',
-        size: 45,
+        size: 40,
     },
     {
         id: 2,
         icon: figma,
         name: 'figma',
-        size: 45,
+        size: 40,
     },
     {
         id: 3,
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg',
         name: 'canva',
-        size: 45,
+        size: 40,
     },
     {
         id: 4,
         icon: postman,
         name: 'postman',
-        size: 45,
+        size: 40,
     },
     {
         id: 5,
         icon: heroku,
         name: 'heroku',
-        size: 45,
+        size: 40,
     },
     {
         id: 6,
         icon: netlify,
         name: 'netlify',
-        size: 45,
+        size: 40,
     },
     {
         id: 7,
         icon: vercel,
         name: 'vercel',
-        size: 45,
+        size: 40,
         class: 'other_icon'
     },
     {
         id: 7,
         icon: aws,
         name: 'aws',
-        size: 45,
+        size: 40,
         class: 'other_icon'
     },
     
@@ -91,48 +92,48 @@ const index = () => (
         <div className={styles.main_sec}>
             <div className={styles.icons}>
                 <div className={styles.icon_div}>
-                    <Image className={styles.skill_icons} src={javascript} height={60} width={60} />
+                    <Image className={`${styles.skill_icons} ${styles.javascript}`} src={javascript} height={55} width={55} />
                     <h3>Javascript</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.reactjs}`} src={react} height={45} width={45} />
+                    <Image className={`${styles.skill_icons} ${styles.reactjs}`} src={react} height={40} width={40} />
                     <h3>React</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.nextjs}`} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" height={45} width={45} />
+                    <Image className={`${styles.skill_icons} ${styles.nextjs}`} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" height={40} width={40} />
                     <h3>Next.js</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.css}`} src={css} height={45} width={45} />
+                    <Image className={`${styles.skill_icons} ${styles.css}`} src={css} height={40} width={40} />
                     <h3>CSS3</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.html}`} src={html} height={45} width={45} />
+                    <Image className={`${styles.skill_icons} ${styles.html}`} src={html} height={40} width={40} />
                     <h3>HTML5</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={styles.skill_icons} src={sass} height={60} width={60} />
+                    <Image className={styles.skill_icons} src={sass} height={55} width={55} />
                     <h3>SASS</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.mui}`} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" height={50} width={50} />
+                    <Image className={`${styles.skill_icons} ${styles.mui}`} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" height={45} width={45} />
                     <h3>Material UI</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.bootstap}`} src={bootstrap} height={45} width={45} />
+                    <Image className={`${styles.skill_icons} ${styles.bootstap}`} src={bootstrap} height={40} width={40} />
                     <h3>BOOTSTRAP</h3>
                 </div>
                 
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.node}`} src={nodejs} height={45} width={45} />
+                    <Image className={`${styles.skill_icons} ${styles.node}`} src={nodejs} height={40} width={40} />
                     <h3>NodeJS</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.express}`} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height={45} width={45} />
+                    <Image className={`${styles.skill_icons} ${styles.express}`} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height={40} width={40} />
                     <h3>ExpressJs</h3>
                 </div>
                 <div className={styles.icon_div}>
-                    <Image className={`${styles.skill_icons} ${styles.mongodb}`} src={mongodb} height={45} width={45} />
+                    <Image className={`${styles.skill_icons} ${styles.mongodb}`} src={mongodb} height={40} width={40} />
                     <h3>MongoDB</h3>
                 </div>
                
@@ -153,6 +154,7 @@ const index = () => (
         </div>
         {/*  */}
         <Services />
+        <Footer />
     </div>
     </div>
 );
