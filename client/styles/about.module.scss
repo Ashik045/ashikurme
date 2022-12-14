@@ -154,12 +154,16 @@
 
           .icon_div {
             .javascript {
-              height: 50px;
-              width: 50px;
+              height: 45px;
+              width: 45px;
             }
             .skill_icons {
               height: 35px;
               width: 35px;
+            }
+
+            h3 {
+              font-size: 16px;
             }
           }
         }
@@ -171,6 +175,22 @@
             display: grid;
             grid-template-columns: 32% 32% 32%;
             grid-gap: 10px;
+
+            .other_icon_div {
+              .round {
+                height: 35px;
+                width: 35px;
+              }
+
+              .ot_icon {
+                height: 35px;
+                width: 35px;
+              }
+
+              h3 {
+                font-size: 16px;
+              }
+            }
           }
         }
       }

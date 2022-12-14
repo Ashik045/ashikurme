@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import Blog from '../../Components/BLog/Blog'
+import Footer from '../../Components/Footer/Footer'
 import Navbar from '../../Components/Navbar/Navbar'
 import styles from '../../styles/blogs.module.scss'
 
@@ -60,6 +61,8 @@ const index = ({blog}) => {
             })}
           </div>
         </div>
+
+        <Footer />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { MdDoneAll } from "react-icons/md";
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import styles from '../../styles/projectdetail.module.scss';
 
@@ -37,6 +38,18 @@ const projectDetail = ({project}) => {
 
 
             {/* features that include on mobile devices */}
+            <div className={styles.responsive_detail}>
+              <h1>{project.title}</h1>
+
+              <span className={styles.iconsss}>
+                  <Link href={project.githubLink} target="_blank">
+                    <p> <FaGithub className={styles.icon} size={20} /> Github </p>
+                  </Link>
+                  <Link href={project.liveLink} target="_blank">
+                    <p> <FaExternalLinkAlt size={20} className={styles.icon} /> Live Link </p>
+                  </Link>
+              </span>
+            </div>
 
             <h2>Project Details:</h2>
             <p>{project.detail}</p>
@@ -47,6 +60,15 @@ const projectDetail = ({project}) => {
                return <li key={i}><MdDoneAll style={{marginRight: '5px'}} /> {feature}</li>
               })}
             </ul>
+
+            <div className={styles.responsive_detail2}>
+              <h3>Technologies & Tools:</h3>
+              <div className={styles.technologies}>
+                  {project.tools.slice(0, 5).map((tool, i) => {
+                      return <span key={i}>{tool}</span>
+                  })}
+              </div>
+            </div>
           </div>
 
           <div className={styles.project_detail_right}>
@@ -71,6 +93,8 @@ const projectDetail = ({project}) => {
           </div>
 
         </div>
+
+        <Footer />
       </div>
     </div>
   )

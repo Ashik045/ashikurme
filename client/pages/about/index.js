@@ -121,7 +121,7 @@ const index = () => (
                 </div>
                 <div className={styles.icon_div}>
                     <Image className={`${styles.skill_icons} ${styles.bootstap}`} src={bootstrap} height={40} width={40} />
-                    <h3>BOOTSTRAP</h3>
+                    <h3>Bootstrap</h3>
                 </div>
                 
                 <div className={styles.icon_div}>
