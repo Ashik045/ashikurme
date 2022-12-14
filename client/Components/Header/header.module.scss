@@ -10,13 +10,14 @@
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 120px;
     position: relative;
     z-index: 10;
 
     .header_main_left {
+      overflow-x: hidden;
       h1 {
         color: #ccd6f6;
         font-size: 60px;
@@ -40,7 +41,7 @@
     position: absolute;
     top: 150px;
     right: 0;
-    opacity: 0.2;
+    opacity: 0.15;
     z-index: 1;
   }
 }
@@ -50,5 +51,34 @@
     .header_bg {
       display: none;
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    height: 630px;
+    .header_main {
+      padding-top: 100px;
+
+      .header_main_left {
+        h1 {
+          font-size: 50px;
+        }
+
+        .header_animated_txt {
+          height: 250px;
+        }
+
+        p {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .header {
+    height: 680px;
   }
 }

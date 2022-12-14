@@ -6,7 +6,7 @@ import styles from './aboutme.module.scss';
 
 function AboutMe({pt}) {
     return (
-        <div className={styles.aboutme} style={{paddingTop: pt ? `${pt}` : '0px'}}> // dynamically generated set the paddingTop property
+        <div className={styles.aboutme} style={{paddingTop: pt ? `${pt}` : '0px'}}> 
             <HeaderTitle title="About Me"  />
             <div className={styles.aboutme_main} >
                 <Image
@@ -15,10 +15,11 @@ function AboutMe({pt}) {
                     alt="web developer"
                     height={400}
                     width={400}
+                    layout="responsive"
                 />
 
                 <div className={styles.text}>
-                    <h2>Hello, I'm Ashikur</h2>
+                    <h2>Hi, my name is Ashikur</h2>
                     <p>
                         I build things for web. I work with clients to identify their website goals
                         and work with them to find a solution that meets their needs. I am here to

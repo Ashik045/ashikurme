@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import AboutMe from '../Components/AboutMe/AboutMe';
 import Blogs from '../Components/Blogs/Blogs';
+import Footer from '../Components/Footer/Footer';
 import Header from '../Components/Header/Header';
 import Navbar from '../Components/Navbar/Navbar';
 import Projects from '../Components/Projects/Projects';
@@ -43,6 +44,7 @@ export default function Home({projects, blogs}) {
                     <Projects projects={projects} />
                     <Services />
                     <Blogs blogs={blogs} />
+                    <Footer />
                 </main>
             )}
         </div>

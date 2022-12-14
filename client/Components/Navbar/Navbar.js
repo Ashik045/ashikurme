@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
+import { FaStream, FaTimes } from "react-icons/fa";
 import styles from './navbar.module.scss';
 
 function Navbar() {
     const [srlHeight, setSrlHeight] = useState(false);
+    const [toggle, setToggle] = useState(false);
     const router = useRouter()
 
     if (typeof window !== 'undefined') {
@@ -16,6 +18,10 @@ function Navbar() {
                 setSrlHeight(false);
             }
         };
+    }
+
+    const handleToggle = () => {
+        setToggle(!toggle)
     }
     return (
         <div
@@ -30,10 +36,10 @@ function Navbar() {
         >
             <div className={styles.navbar_main}>
                 <Link href="/">
-                <div className={styles.brand}>
-                    <h3>Ashikur</h3>
-                    <span>I&apos;m a programmer</span>
-                </div>
+                    <div className={styles.brand}>
+                        <h3>Ashikur</h3>
+                        <span>I&apos;m a programmer</span>
+                    </div>
                 </Link>
 
                 <div className={styles.menus}>
@@ -51,19 +57,31 @@ function Navbar() {
                     </Link>
                 </div>
 
-                {/* <div className="toggler">
-                    <button
-                        class="hamburger hamburger--elastic"
-                        type="button"
-                        aria-label="Menu"
-                        aria-controls="navigation"
-                    >
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner" />
-                        </span>
-                    </button>
-                </div> */}
+                <div className={styles.responsive_navbar}>
+                    {!toggle &&  <FaStream onClick={handleToggle} className={styles.toggle_icon}/>}
+                </div>
+
+                {toggle && (
+                    <div className={styles.res_nav_menus}>
+                        <FaTimes className={styles.times_icon} onClick={handleToggle} />
+                        <div className={styles.res_nav_menu}>
+                            <Link href="/">
+                                <p onClick={handleToggle} className={router.pathname === '/' ? `${styles.active}` : ''}>Home</p>
+                            </Link>
+                            <Link href="/about">
+                                <p onClick={handleToggle} className={router.pathname === '/about' ? `${styles.active}` : ''}>About</p>
+                            </Link>
+                            <Link href="/projects">
+                                <p onClick={handleToggle} className={router.pathname === '/projects' ? `${styles.active}` : ''}>Portfolio</p>
+                            </Link>
+                            <Link href="/blogs">
+                                <p onClick={handleToggle} className={router.pathname === '/blogs' ? `${styles.active}` : ''}>Blogs</p>
+                            </Link>
+                        </div>
+                    </div>
+                )}
             </div>
+            
         </div>
     );
 }

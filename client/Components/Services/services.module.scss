@@ -6,8 +6,8 @@
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 50px;
     display: grid;
     grid-template-columns: 32% 32% 32%;
@@ -51,6 +51,48 @@
 
       &:hover {
         border: 1px solid #64ffda;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .services {
+    .services_main {
+      display: grid;
+      grid-template-columns: 49% 49%;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services {
+    .services_main {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+
+      .services_card {
+        height: 250px;
+
+        .services_card_top {
+          height: 60px;
+
+          h2 {
+            color: #ccd6f6;
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+        }
+
+        .services_card_btm {
+          margin-top: 10px;
+        }
       }
     }
   }

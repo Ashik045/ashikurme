@@ -17,8 +17,8 @@
     max-width: 1124px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     display: grid;
     grid-template-columns: 15% 80%;
     justify-content: space-between;
@@ -58,6 +58,108 @@
 
       .active {
         color: #64ffda;
+      }
+    }
+
+    .responsive_navbar {
+      display: none;
+      margin-left: auto;
+
+      .toggle_icon {
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+
+    .res_nav_menus {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 255, 221, 0.92);
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease;
+      z-index: 20;
+      -webkit-animation: scale-up-center 0.4s
+        cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+      .times_icon {
+        position: fixed;
+        top: 25px;
+        right: 35px;
+        cursor: pointer;
+        font-size: 20px;
+        color: black;
+      }
+
+      .res_nav_menu {
+        text-align: center;
+        p {
+          cursor: pointer;
+          color: black;
+          transition: all 0.2s ease;
+          font-size: 20px;
+          font-weight: 600;
+
+          &:hover {
+            scale: 1.15;
+          }
+        }
+      }
+    }
+
+    @-webkit-keyframes scale-up-center {
+      0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @keyframes scale-up-center {
+      0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    height: 75px;
+    background-color: #0a192fd0;
+    // background-color: #0b1a30f1;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    .navbar_main {
+      display: grid;
+      grid-template-columns: 50% 30%;
+      justify-content: space-between;
+      align-items: center;
+      .menus {
+        display: none;
+      }
+
+      .responsive_navbar {
+        display: block;
       }
     }
   }
