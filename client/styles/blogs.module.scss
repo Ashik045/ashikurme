@@ -77,7 +77,8 @@
       grid-template-columns: 49% 49%;
       gap: 25px;
       justify-content: center;
-      align-items: center;
+      // align-items: center;
+      min-height: 400px;
     }
   }
 }

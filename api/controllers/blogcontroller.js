@@ -20,8 +20,14 @@ const createBlog = async (req, res) => {
 
 // get all blogs from the database
 const gelAllBlogs = async (req, res) => {
+    const { tag } = req.query;
+    let blogs;
     try {
-        const blogs = await BlogModel.find();
+        if (tag) {
+            blogs = await BlogModel.find({ tag });
+        } else {
+            blogs = await BlogModel.find();
+        }
 
         res.status(200).json({
             message: blogs,

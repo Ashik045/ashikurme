@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import Blog from '../../Components/BLog/Blog'
 import Footer from '../../Components/Footer/Footer'
@@ -8,26 +8,46 @@ import styles from '../../styles/blogs.module.scss'
 
 const index = ({blog}) => {
   const [blogs, setBlogs] = useState(blog);
+  const [tag, setTag] = useState(false);
   const [filterBlogs, setFilterBlogs] = useState([]);
+  const [filterBlogByTag, setFilterBlogByTag] = useState([]);
   const [input, setInput] = useState('')
   
+  useEffect(() => {
+    if (input?.length === 0) {
+      setFilterBlogs(blogs);
+  }
+  }, [input, blogs])
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (input?.length > 0) {
       const filterData = blogs?.filter((blog) => {
-        Object.values(blog.title).join('').toLowerCase().includes(input?.toLowerCase())
+        return Object.values(blog.title).join('').toLowerCase().includes(input?.toLowerCase())
       })
       setFilterBlogs(filterData)
-      console.log(input);
     } else {
       setFilterBlogs(blogs)
     }
-
-    // 
-    //   if (input?.length === 0) {
-    //     setFilterBlogs(blogs);
-    // }
   }
+
+  const handleTag = async (tagg) => {
+    setTag(true)
+    console.log(tag);
+    if (tagg) {
+      if (tagg === 'all') {
+        const res2 = await axios.get(`http://localhost:4000/api/blogs/all`)
+        setBlogs(res2.data.message)
+      } else {
+        const res = await axios.get(`http://localhost:4000/api/blogs/all?tag=${tagg}`)
+        console.log(res.data.message);
+        setBlogs(res.data.message)
+    }
+    } else {
+      setBlogs(blogs)
+    }
+  }
+
   return (
     <div className={styles.blog_page}>
         <Navbar />
@@ -46,17 +66,19 @@ const index = ({blog}) => {
             <div className={styles.tag_sec}>
               <h2>Tags:</h2>
               <div className={styles.tags}>
-                <span>Website</span>
-                <span>Javascript</span>
-                <span>Security</span>
-                <span>Website</span>
-                <span>CSS</span>
+                <span onClick={() => handleTag('all')}>All</span>
+                <span onClick={() => handleTag('javascript')}>Javascript</span>
+                <span onClick={() => handleTag('security')}>Security</span>
+                <span onClick={() => handleTag('website')}>Website</span>
+                <span onClick={() => handleTag('css')}>CSS</span>
               </div>
             </div>
           </div>
 
           <div className={styles.right}>
-            {blogs?.map((blog) => {
+            {blogs.length === 0 || filterBlogs.length === 0 ? (
+              <p style={{textAlign: 'center', color: '#ccd6f6'}}>No blog found!</p>
+            ) : (filterBlogs || blogs)?.map((blog) => {
               return <Blog key={blog._id} blog={blog} />
             })}
           </div>
