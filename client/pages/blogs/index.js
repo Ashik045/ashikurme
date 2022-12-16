@@ -36,11 +36,10 @@ const index = ({blog}) => {
     console.log(tag);
     if (tagg) {
       if (tagg === 'all') {
-        const res2 = await axios.get(`http://localhost:4000/api/blogs/all`)
+        const res2 = await axios.get(`https://ashikurme-backend.onrender.com/api/blogs/all`)
         setBlogs(res2.data.message)
       } else {
-        const res = await axios.get(`http://localhost:4000/api/blogs/all?tag=${tagg}`)
-        console.log(res.data.message);
+        const res = await axios.get(`https://ashikurme-backend.onrender.com/api/blogs/all?tag=${tagg}`)
         setBlogs(res.data.message)
     }
     } else {
@@ -92,7 +91,7 @@ const index = ({blog}) => {
 export default index
 
 export async function getStaticProps() {
-  const res2 = await axios.get('http://localhost:4000/api/blogs/all')
+  const res2 = await axios.get('https://ashikurme-backend.onrender.com/api/blogs/all')
 
   const blogs = await res2.data.message;
 

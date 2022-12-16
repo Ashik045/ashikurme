@@ -34,7 +34,7 @@ const index = ({projects}) => {
 export default index
 
 export async function getStaticProps() {
-  const res = await axios.get('http://localhost:4000/api/projects/all')
+  const res = await axios.get('https://ashikurme-backend.onrender.com/api/projects/all')
 
   const projectData = await res.data.message
 

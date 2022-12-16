@@ -35,7 +35,7 @@ app.use('/api/projects', projects);
 app.use('/api/blogs', blogs);
 
 // default route for home page
-app.use('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.status(200).json({
         message: 'server running',
     });

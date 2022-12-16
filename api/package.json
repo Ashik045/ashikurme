@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "SET NODE_ENV=development & nodemon index.js"
+    "start": "SET NODE_ENV=development & nodemon index.js",
+    "dev": "node index.js"
   },
   "devDependencies": {
     "eslint": "^8.2.0",

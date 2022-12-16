@@ -39,7 +39,7 @@ const projectDetail = ({project}) => {
 
             {/* features that include on mobile devices */}
             <div className={styles.responsive_detail}>
-              <h1>{project.title}</h1>
+              <h1>{project?.title}</h1>
 
               <span className={styles.iconsss}>
                   <Link href={project.githubLink} target="_blank">
@@ -52,7 +52,7 @@ const projectDetail = ({project}) => {
             </div>
 
             <h2>Project Details:</h2>
-            <p>{project.detail}</p>
+            <p>{project?.detail}</p>
 
             <h2>Features:</h2>
             <ul>
@@ -73,7 +73,7 @@ const projectDetail = ({project}) => {
 
           <div className={styles.project_detail_right}>
 
-            <h1>{project.title}</h1>
+            <h1>{project?.title}</h1>
 
             <span className={styles.iconsss}>
                 <Link href={project.githubLink} target="_blank">
@@ -104,7 +104,7 @@ export default projectDetail;
 
 // static site generation
 export async function getStaticPaths() {
-  const res = await axios.get('http://localhost:4000/api/projects/all')
+  const res = await axios.get('https://ashikurme-backend.onrender.com/api/projects/all')
   const datas = await res.data.message;
 
   const paths = datas.map((data) => ({
@@ -115,7 +115,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
@@ -123,7 +123,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const params = context.params;
 
-  const res = await axios.get(`http://localhost:4000/api/projects/${params.projectid}`)
+  const res = await axios.get(`https://ashikurme-backend.onrender.com/api/projects/${params.projectid}`)
 
   const project = await res.data.message;
 

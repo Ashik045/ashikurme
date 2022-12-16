@@ -21,7 +21,7 @@ const blogDetail = ({blogDetail, otherBlogs}) => {
 
         <div className={styles.blog_detail_main}>
           <div className={styles.main_blogdetail}>
-            <h1>{blogDetail.title}</h1>
+            <h1>{blogDetail?.title}</h1>
             <Image src={blogDetail.image} className={styles.blogdetail_img} height={400} width={700} layout='responsive' alt='blogs' />
 
             {/* should map */}
@@ -51,7 +51,7 @@ export default blogDetail
 
 // getStaticPaths 
 export async function getStaticPaths() {
-  const res = await axios.get('http://localhost:4000/api/blogs/all');
+  const res = await axios.get('https://ashikurme-backend.onrender.com/api/blogs/all');
 
   const data = await res.data.message;
 
@@ -65,15 +65,15 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true
+    fallback: 'blocking'
   }
 }
 
 // getStaticProps
 export async function getStaticProps(context) {
   const params = context.params
-  const res = await axios.get(`http://localhost:4000/api/blogs/${params.blogid}`)
-  const res2 = await axios.get(`http://localhost:4000/api/blogs/all`)
+  const res = await axios.get(`https://ashikurme-backend.onrender.com/api/blogs/${params.blogid}`)
+  const res2 = await axios.get(`https://ashikurme-backend.onrender.com/api/blogs/all`)
 
   const data = await res.data.message;
   const data2 = await res2.data.message;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AboutMe from '../Components/AboutMe/AboutMe';
 import Blogs from '../Components/Blogs/Blogs';
 import Footer from '../Components/Footer/Footer';
@@ -13,15 +13,15 @@ import styles from '../styles/home.module.scss';
 export default function Home({projects, blogs}) {
     const [loading, setLoading] = useState(false);
 
-    // eye loading effect
-    // useEffect(() => {
-    //     setLoading(true);
-    //     const timer = setTimeout(() => {
-    //         console.log('run');
-    //         setLoading(false);
-    //     }, 5000);
-    //     return () => clearTimeout(timer);
-    // }, []);
+    // eye loading effectt
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(() => {
+            console.log('run');
+            setLoading(false);
+        }, 4000);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <div className="container">
@@ -53,8 +53,8 @@ export default function Home({projects, blogs}) {
 
 // fetch the data from the server
 export async function getStaticProps() {
-    const res = await axios.get('http://localhost:4000/api/projects/all')
-    const res2 = await axios.get('http://localhost:4000/api/blogs/all')
+    const res = await axios.get('https://ashikurme-backend.onrender.com/api/projects/all')
+    const res2 = await axios.get('https://ashikurme-backend.onrender.com/api/blogs/all')
 
     const projects = await res.data.message;
     const blogs = await res2.data.message;
