@@ -24,6 +24,7 @@ const blogDetail = ({blogDetail, otherBlogs}) => {
             <h1>{blogDetail.title}</h1>
             <Image src={blogDetail.image} className={styles.blogdetail_img} height={400} width={700} layout='responsive' alt='blogs' />
 
+            {/* should map */}
             <p>{blogDetail.desc}</p>
 
             <h2>{blogDetail.subtitle1}</h2>
