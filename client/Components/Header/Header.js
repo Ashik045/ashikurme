@@ -121,6 +121,8 @@ function Header() {
                         and back-end technologies and a good deal of experience developing web
                         applications.
                     </p>
+
+                    {/* <SocialIcon /> */}
                 </div>
 
             </div>

@@ -2,9 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 import profilePic from '../../images/up-dp-removebg-preview (3).jpg';
 import HeaderTitle from '../HeaderTitle/HeaderTitle';
+import SocialIcon from '../SocialIcon/SocialIcon';
 import styles from './aboutme.module.scss';
 
-function AboutMe({pt}) {
+function AboutMe({pt, social}) {
     return (
         <div className={styles.aboutme} style={{paddingTop: pt ? `${pt}` : '0px'}}> 
             <HeaderTitle title="About Me"  />
@@ -40,6 +41,13 @@ function AboutMe({pt}) {
                         <li>HTML5</li>
                         <li>Bootstap5</li>
                     </ul>
+
+                    {social && (
+                        <div style={{paddingTop: '5px'}}>
+                        <p>Socials: </p>
+                            <SocialIcon />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

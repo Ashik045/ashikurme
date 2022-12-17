@@ -1,27 +1,15 @@
 import axios from 'axios';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
 import AboutMe from '../Components/AboutMe/AboutMe';
 import Blogs from '../Components/Blogs/Blogs';
+import Contact from '../Components/Contact/Contact';
 import Footer from '../Components/Footer/Footer';
 import Header from '../Components/Header/Header';
 import Navbar from '../Components/Navbar/Navbar';
 import Projects from '../Components/Projects/Projects';
 import Services from '../Components/Services/Services';
-import styles from '../styles/home.module.scss';
 
 export default function Home({projects, blogs}) {
-    const [loading, setLoading] = useState(false);
-
-    // eye loading effectt
-    useEffect(() => {
-        setLoading(true);
-        const timer = setTimeout(() => {
-            console.log('run');
-            setLoading(false);
-        }, 4000);
-        return () => clearTimeout(timer);
-    }, []);
 
     return (
         <div className="container">
@@ -32,11 +20,11 @@ export default function Home({projects, blogs}) {
             </Head>
 
     {/* show the beautiful eye loading animation */}
-            {loading ? (
+            {/* {loading ? (
                 <div className={styles.loader_main}>
                     <span className={styles.loader} />
                 </div>
-            ) : (
+            ) : ( */}
                 <main className="main">
                     <Navbar />
                     <Header />
@@ -44,9 +32,10 @@ export default function Home({projects, blogs}) {
                     <Projects projects={projects} />
                     <Services />
                     <Blogs blogs={blogs} />
+                    <Contact />
                     <Footer />
                 </main>
-            )}
+            {/* )} */}
         </div>
     );
 }

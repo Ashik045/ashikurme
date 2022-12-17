@@ -15,7 +15,7 @@ const blogSchema = mongoose.Schema(
             required: true,
         },
         desc: {
-            type: String,
+            type: Array,
             required: true,
         },
         subdesc1: {

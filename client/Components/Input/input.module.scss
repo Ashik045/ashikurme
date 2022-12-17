@@ -1,0 +1,35 @@
+.input_div {
+  .input_label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ccd6f6c5;
+  }
+
+  .input_inp {
+    margin-top: 5px;
+    display: block !important;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid #ccd6f669;
+    outline: none;
+    background: none;
+    color: #ccd6f6c5;
+    font-size: 14px;
+  }
+
+  .input_err {
+    color: red;
+    margin-top: -10px;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: none;
+  }
+
+  .input_inp:invalid[focused="true"] ~ .input_err {
+    display: block;
+  }
+}

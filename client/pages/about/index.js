@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 import AboutMe from '../../Components/AboutMe/AboutMe';
+import Contact from '../../Components/Contact/Contact';
 import Footer from '../../Components/Footer/Footer';
 import HeaderTitle from '../../Components/HeaderTitle/HeaderTitle';
 import Navbar from '../../Components/Navbar/Navbar';
@@ -86,7 +87,7 @@ const index = () => (
         </Head>
     <div className={styles.about_page}>
         <Navbar />
-        <AboutMe pt="70px" />
+        <AboutMe pt="70px" social={true} />
         <HeaderTitle title="Skills"/>
         
         <div className={styles.main_sec}>
@@ -154,6 +155,7 @@ const index = () => (
         </div>
         {/*  */}
         <Services />
+        <Contact />
         <Footer />
     </div>
     </div>
