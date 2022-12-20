@@ -8,7 +8,7 @@ import styles from '../styles/home.module.scss';
 function MyApp({ Component, pageProps }) {
     const [loading, setLoading] = useState(false);
 
-    // eye loading effectt
+    // eye loading effect
     useEffect(() => {
         setLoading(true);
         const timer = setTimeout(() => {
