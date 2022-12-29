@@ -8,8 +8,8 @@ const Contact = () => {
     const [values, setValues] = useState({
         user_name: '',
         user_email: '',
-        message: ''
     })
+    const [userMsg, setUserMsg] = useState('')
     const form = useRef();
 
     const inputs = [
@@ -20,7 +20,6 @@ const Contact = () => {
             placeholder: 'Enter your name',
             type: 'text',
             required: true,
-            pattern: '^[A-Za-z]{1,25}$',
             errMsg: 'Name should be 1-25 characters & should not include any special character!',
         },
         {
@@ -40,20 +39,28 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(form.current);
+
+        const templateParams = {
+            user_name: values.user_name.value,
+            user_email: values.user_email.value,
+            user_message: userMsg
+        }
 
         // email not sending 
         try {
-            emailjs.send('service_gyak6tc', 'template_u1khvsb', form.current, 'xFCXJaziIzO_vQ1c5')
+            emailjs.send('service_8sbjwd9', 'template_u1khvsb', templateParams, 'xFCXJaziIzO_vQ1c5')
             .then((result) => {
                 console.log(result.text);
+            setValues({user_name: '', user_email: ''})
             }), (err) => {
                 console.log(err.text);
             }
+            setValues({user_name: '', user_email: ''})
+            setUserMsg('')
 
             console.log('send succssfully');
         } catch (error) {
-            console.log('err' + error);
+            console.log(error);
         }
     }
 
@@ -69,7 +76,7 @@ const Contact = () => {
                 </div>
 
                 <label >Message:</label>
-                <textarea name="message" id="" cols="55" rows="10" placeholder='Leave a message..' required="true" ></textarea>
+                <textarea name="message" value={userMsg} onChange={(e) => setUserMsg(e.target.value)} cols="55" rows="10" placeholder='Leave a message..' required></textarea>
 
                 <input type="submit" value="Send" className={styles.submit_btn} />
             </form>
