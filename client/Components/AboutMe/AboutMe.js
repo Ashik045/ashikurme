@@ -22,11 +22,7 @@ function AboutMe({pt, social}) {
                 <div className={styles.text}>
                     <h2>Hi, my name is Ashikur</h2>
                     <p>
-                        I build things for web. I work with clients to identify their website goals
-                        and work with them to find a solution that meets their needs. I am here to
-                        assist you with any needs you may have. I have the positive attitude and
-                        expertise to assist you with any project, regardless of how small or large
-                        it might be.
+                        A self-motivated MERN stack developer. Being a fast learner, I am always looking to learn new technologies and constantly trying to keep up with new trends. I bring ideas to life with excellent design & coding skills. I have the positive attitude and expertise to assist you with any project, regardless of how small or large it might be.
                     </p>
 
                     <p className={styles.expertise}>Among my areas of expertise are:</p>

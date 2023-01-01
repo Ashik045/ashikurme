@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import CustomCursor from 'custom-cursor-react';
 import 'custom-cursor-react/dist/index.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/globals.css';
 import styles from '../styles/home.module.scss';
 
@@ -9,14 +9,14 @@ function MyApp({ Component, pageProps }) {
     const [loading, setLoading] = useState(false);
 
     // eye loading effect
-    // useEffect(() => {
-    //     setLoading(true);
-    //     const timer = setTimeout(() => {
-    //         console.log('run');
-    //         setLoading(false);
-    //     }, 4000);
-    //     return () => clearTimeout(timer);
-    // }, []);
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(() => {
+            console.log('run');
+            setLoading(false);
+        }, 4000);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <>
