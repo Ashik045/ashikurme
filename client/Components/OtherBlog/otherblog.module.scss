@@ -16,6 +16,11 @@
       margin-bottom: -10px;
       cursor: pointer;
       transition: all 0.3s ease;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
 
       &:hover {
         color: #64ffda;

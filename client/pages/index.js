@@ -51,7 +51,7 @@ export async function getStaticProps() {
     return {
         props: {
             projects: projects,
-            blogs: blogs,
+            blogs: blogs.slice(0, 5),
         }
     }
 }

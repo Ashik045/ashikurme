@@ -73,12 +73,26 @@
     }
 
     .right {
-      display: grid;
-      grid-template-columns: 49% 49%;
-      gap: 25px;
-      justify-content: center;
+      // display: grid;
+      // grid-template-columns: 49% 49%;
+      // gap: 25px;
+      // justify-content: center;
       // align-items: center;
       min-height: 400px;
+
+      .right_skeleton {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        gap: 25px;
+        justify-content: center;
+      }
+
+      .right_main_blogs {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        gap: 25px;
+        justify-content: center;
+      }
     }
   }
 }
@@ -131,11 +145,21 @@
       }
 
       .right {
-        display: grid;
-        grid-template-columns: 100%;
-        gap: 25px;
-        justify-content: center;
-        align-items: center;
+        .right_skeleton {
+          display: grid;
+          grid-template-columns: 100%;
+          gap: 25px;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .right_main_blogs {
+          display: grid;
+          grid-template-columns: 100%;
+          gap: 25px;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }

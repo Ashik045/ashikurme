@@ -2,7 +2,8 @@
   .image {
     cursor: pointer;
     transition: all 0.3s ease;
-    object-fit: cover;
+    width: 100%;
+    border-radius: 2px;
 
     &:hover {
       scale: 1.03;
@@ -14,6 +15,11 @@
     transition: all 0.1s ease;
     cursor: pointer;
     margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 
     &:hover {
       color: #64ffda;
@@ -46,5 +52,15 @@
 
   .continue_reading:hover .continue_reading_icon {
     margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .blog_component {
+    .image {
+      cursor: pointer;
+      width: 100%;
+      height: 250px;
+    }
   }
 }

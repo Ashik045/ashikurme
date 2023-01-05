@@ -2,6 +2,7 @@ import axios from 'axios';
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import OtherBlog from '../../Components/OtherBlog/OtherBlog';
 import styles from '../../styles/blogdetail.module.scss';
@@ -29,11 +30,56 @@ const blogDetail = ({blogDetail, otherBlogs}) => {
               return <p key={i}>{des}</p>
             }) }
 
-            <h2>{blogDetail.subtitle1 && blogDetail.subtitle1}</h2>
-            <p>{blogDetail.subdesc1 && blogDetail.subdesc1}</p>
+            <h2>{blogDetail.ques1 && blogDetail.ques1}</h2>
+            {blogDetail.ques1Ans && blogDetail.ques1Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
 
-            <h2>{blogDetail.subtitle2 && blogDetail.subtitle2}</h2>
-            <p>{blogDetail.subdesc2 && blogDetail.subdesc2}</p>
+            <h2>{blogDetail.ques2 && blogDetail.ques2}</h2>
+            {blogDetail.ques2Ans && blogDetail.ques2Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+
+            <h2>{blogDetail.ques3 && blogDetail.ques3}</h2>
+            {blogDetail.ques3Ans && blogDetail.ques3Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+
+            <h2>{blogDetail.ques4 && blogDetail.ques4}</h2>
+            {blogDetail.ques4Ans && blogDetail.ques4Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+
+            <h2>{blogDetail.ques5 && blogDetail.ques5}</h2>
+            {blogDetail.ques5Ans && blogDetail.ques5Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+
+            <h2>{blogDetail.ques6 && blogDetail.ques6}</h2>
+            {blogDetail.ques6Ans && blogDetail.ques6Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+
+            <h2>{blogDetail.ques7 && blogDetail.ques7}</h2>
+            {blogDetail.ques7Ans && blogDetail.ques7Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+
+            <h2>{blogDetail.ques8 && blogDetail.ques8}</h2>
+            {blogDetail.ques8Ans && blogDetail.ques8Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+
+            <h2>{blogDetail.ques9 && blogDetail.ques9}</h2>
+            {blogDetail.ques9Ans && blogDetail.ques9Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+
+            <h2>{blogDetail.ques10 && blogDetail.ques10}</h2>
+            {blogDetail.ques10Ans && blogDetail.ques10Ans.map((ans, i) => {
+              return <p key={i}>{ans}</p>
+            })}
+            
           </div>
 
           <div className={styles.blogdetail_right}>
@@ -45,6 +91,8 @@ const blogDetail = ({blogDetail, otherBlogs}) => {
           </div>
         </div>
         </div>
+
+        <Footer />
     </div>
   )
 }
@@ -84,6 +132,7 @@ export async function getStaticProps(context) {
     props: {
       blogDetail: data,
       otherBlogs: data2,
-    }
+    },
+    revalidate: 10,
   }
 }

@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import Blog from '../../Components/BLog/Blog'
 import Footer from '../../Components/Footer/Footer'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -9,6 +11,7 @@ import styles from '../../styles/blogs.module.scss'
 const index = ({blog}) => {
   const [blogs, setBlogs] = useState(blog);
   const [tag, setTag] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [filterBlogs, setFilterBlogs] = useState([]);
   const [filterBlogByTag, setFilterBlogByTag] = useState([]);
   const [input, setInput] = useState('')
@@ -33,7 +36,8 @@ const index = ({blog}) => {
 
   const handleTag = async (tagg) => {
     setTag(true)
-    console.log(tag);
+    setLoading(true)
+    // console.log(tag);
     if (tagg) {
       if (tagg === 'all') {
         const res2 = await axios.get(`https://ashikurme-backend.onrender.com/api/blogs/all`)
@@ -42,8 +46,10 @@ const index = ({blog}) => {
         const res = await axios.get(`https://ashikurme-backend.onrender.com/api/blogs/all?tag=${tagg}`)
         setBlogs(res.data.message)
     }
+    setLoading(false)
     } else {
       setBlogs(blogs)
+      setLoading(false)
     }
   }
 
@@ -67,19 +73,58 @@ const index = ({blog}) => {
               <div className={styles.tags}>
                 <span onClick={() => handleTag('all')}>All</span>
                 <span onClick={() => handleTag('javascript')}>Javascript</span>
-                <span onClick={() => handleTag('security')}>Security</span>
-                <span onClick={() => handleTag('website')}>Website</span>
+                <span onClick={() => handleTag('react')}>React</span>
+                <span onClick={() => handleTag('website')}>NodeJS</span>
                 <span onClick={() => handleTag('css')}>CSS</span>
               </div>
             </div>
           </div>
 
           <div className={styles.right}>
-            {blogs.length === 0 || filterBlogs.length === 0 ? (
+            {loading ? <div className={styles.right_skeleton}>
+                          <div>
+                            <Skeleton height={180} baseColor="#ccd6f6" />
+                            <Skeleton
+                                height={40}
+                                style={{ marginTop: '15px', marginBottom: '10px' }}
+                                baseColor="#ccd6f6"
+                            />
+                            <Skeleton count={4} baseColor="#ccd6f6" />
+                          </div>
+                          <div>
+                            <Skeleton height={180} baseColor="#ccd6f6" />
+                            <Skeleton
+                                height={40}
+                                style={{ marginTop: '15px', marginBottom: '10px' }}
+                                baseColor="#ccd6f6"
+                            />
+                            <Skeleton count={4} baseColor="#ccd6f6" />
+                          </div>
+                          <div>
+                            <Skeleton height={180} baseColor="#ccd6f6" />
+                            <Skeleton
+                                height={40}
+                                style={{ marginTop: '15px', marginBottom: '10px' }}
+                                baseColor="#ccd6f6"
+                            />
+                            <Skeleton count={4} baseColor="#ccd6f6" />
+                          </div>
+                          <div>
+                            <Skeleton height={180} baseColor="#ccd6f6" />
+                            <Skeleton
+                                height={40}
+                                style={{ marginTop: '15px', marginBottom: '10px' }}
+                                baseColor="#ccd6f6"
+                            />
+                            <Skeleton count={4} baseColor="#ccd6f6" />
+                          </div>
+                      </div> : blogs.length === 0 || filterBlogs.length === 0 ? (
               <p style={{textAlign: 'center', color: '#ccd6f6'}}>No blog found!</p>
-            ) : (filterBlogs || blogs)?.map((blog) => {
+            ) : <div className={styles.right_main_blogs}> {(filterBlogs || blogs)?.map((blog) => {
               return <Blog key={blog._id} blog={blog} />
-            })}
+            }) }
+              </div> 
+            }
           </div>
         </div>
 

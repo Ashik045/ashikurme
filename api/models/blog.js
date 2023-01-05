@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const mongoose = require('mongoose');
 
 const blogSchema = mongoose.Schema(
@@ -6,25 +7,69 @@ const blogSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        subtitle1: {
-            type: String,
-            required: true,
-        },
-        subtitle2: {
-            type: String,
-            required: true,
-        },
         desc: {
             type: Array,
             required: true,
         },
-        subdesc1: {
+        ques1: {
             type: String,
-            required: true,
         },
-        subdesc2: {
+        ques1Ans: {
+            type: Array,
+        },
+        ques2: {
             type: String,
-            required: true,
+        },
+        ques2Ans: {
+            type: Array,
+        },
+        ques3: {
+            type: String,
+        },
+        ques3Ans: {
+            type: Array,
+        },
+        ques4: {
+            type: String,
+        },
+        ques4Ans: {
+            type: Array,
+        },
+        ques5: {
+            type: String,
+        },
+        ques5Ans: {
+            type: Array,
+        },
+        ques6: {
+            type: String,
+        },
+        ques6Ans: {
+            type: Array,
+        },
+        ques7: {
+            type: String,
+        },
+        ques7Ans: {
+            type: Array,
+        },
+        ques8: {
+            type: String,
+        },
+        ques8Ans: {
+            type: Array,
+        },
+        ques9: {
+            type: String,
+        },
+        ques9Ans: {
+            type: Array,
+        },
+        ques10: {
+            type: String,
+        },
+        ques10Ans: {
+            type: Array,
         },
         image: {
             type: String,
