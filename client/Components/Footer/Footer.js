@@ -12,7 +12,7 @@ const Footer = () => {
             <div className={styles.footer_main_component}>
                 <div className={styles.footer_left}>
                     <h1>Ashikur</h1>
-                    <p>I'm a full-stack developer. I have a solid understanding of both front-end and back-end technologies and a good deal of experience developing web applications.</p>
+                    <p>MERN stack developer. With years of experience in both front-end and back-end technologies and a good deal of experience in creating dynamic, professional and responsive web applications.</p>
 
                     <div className={styles.footer_contact}>
                         <Link href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" target="_blank">
@@ -34,6 +34,9 @@ const Footer = () => {
                         </Link>
                         <Link href="/blogs">
                             <p >Blogs</p>
+                        </Link>
+                        <Link href="/contact">
+                            <p >Contact</p>
                         </Link>
                 </div>
             </div>

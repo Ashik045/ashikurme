@@ -53,8 +53,13 @@
         align-items: center;
       }
 
-      p {
+      .project_detail {
         color: #ccd6f6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
       }
 
       .r_t_l_tools {
@@ -103,9 +108,13 @@
         justify-content: end;
       }
 
-      p {
+      .project_detail {
         color: #ccd6f6;
-        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
       }
 
       .r_t_l_tools {

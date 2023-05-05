@@ -22,14 +22,20 @@ function AboutMe({pt, social}) {
                 <div className={styles.text}>
                     <h2>Hi, my name is Ashikur</h2>
                     <p>
-                        A self-motivated MERN stack developer. Being a fast learner, I am always looking to learn new technologies and constantly trying to keep up with new trends. I bring ideas to life with excellent design & coding skills. I have the positive attitude and expertise to assist you with any project, regardless of how small or large it might be.
+                    As an accomplished MERN stack developer, I possess a profound understanding
+                    of software architecture and database design.
+                    </p>
+                    <p>
+                    My strong drive for learning and adapting to new technologies has enabled me to
+                    stay up-to-date with the latest trends and continuously improve my skills.
                     </p>
 
                     <p className={styles.expertise}>Among my areas of expertise are:</p>
                     <ul>
-                        <li>Javascript</li>
-                        <li>React Js</li>
                         <li>Next.js</li>
+                        <li>React Js</li>
+                        <li>TypeScript</li>
+                        <li>Javascript</li>
                         <li>Node.js</li>
                         <li>MongoDB</li>
                         <li>CSS3</li>

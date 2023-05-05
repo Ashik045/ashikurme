@@ -55,6 +55,9 @@ function Navbar() {
                     <Link href="/blogs">
                         <p className={router.pathname === '/blogs' ? `${styles.active}` : ''}>Blogs</p>
                     </Link>
+                    <Link href="/contact">
+                        <p className={router.pathname === '/contact' ? `${styles.active}` : ''}>Contact</p>
+                    </Link>
                 </div>
 
                 <div className={styles.responsive_navbar}>
@@ -77,6 +80,9 @@ function Navbar() {
                             <Link href="/blogs">
                                 <p onClick={handleToggle} className={router.pathname === '/blogs' ? `${styles.active}` : ''}>Blogs</p>
                             </Link>
+                            <Link href="/contact">
+                        <p className={router.pathname === '/contact' ? `${styles.active}` : ''}>Contact</p>
+                    </Link>
                         </div>
                     </div>
                 )}

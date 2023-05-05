@@ -21,6 +21,7 @@ import nodejs from '../../images/nodejs.png';
 import postman from '../../images/postman.png';
 import react from '../../images/react.png';
 import sass from '../../images/sass.png';
+import typescript from '../../images/typescript_icon.png';
 import vercel from '../../images/vercel.png';
 import styles from '../../styles/about.module.scss';
 
@@ -92,6 +93,10 @@ const index = () => (
         
         <div className={styles.main_sec}>
             <div className={styles.icons}>
+                <div className={styles.icon_div}>
+                    <Image className={`${styles.skill_icons} ${styles.typescript}`} src={typescript} height={45} width={45} />
+                    <h3>TypeScript</h3>
+                </div>
                 <div className={styles.icon_div}>
                     <Image className={`${styles.skill_icons} ${styles.javascript}`} src={javascript} height={55} width={55} />
                     <h3>Javascript</h3>

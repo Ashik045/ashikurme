@@ -57,7 +57,7 @@ const projectDetail = ({project}) => {
             <h2>Features:</h2>
             <ul>
               {project.features.map((feature, i) => {
-               return <li key={i}><MdDoneAll style={{marginRight: '5px'}} /> {feature}</li>
+               return <li key={i}><MdDoneAll style={{marginRight: '5px', marginTop: '5px'}} /> {feature}</li>
               })}
             </ul>
 
