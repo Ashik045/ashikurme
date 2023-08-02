@@ -19,12 +19,6 @@ export default function Home({projects, blogs}) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-    {/* show the beautiful eye loading animation */}
-            {/* {loading ? (
-                <div className={styles.loader_main}>
-                    <span className={styles.loader} />
-                </div>
-            ) : ( */}
                 <main className="main">
                     <Navbar />
                     <Header />
@@ -35,7 +29,6 @@ export default function Home({projects, blogs}) {
                     <Contact />
                     <Footer />
                 </main>
-            {/* )} */}
         </div>
     );
 }

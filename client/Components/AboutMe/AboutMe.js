@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import resume from '../../images/AshikurFull-stack.pdf';
 import profilePic from '../../images/up-dp-removebg-preview (3).jpg';
 import HeaderTitle from '../HeaderTitle/HeaderTitle';
 import SocialIcon from '../SocialIcon/SocialIcon';
@@ -14,18 +15,18 @@ function AboutMe({pt, social}) {
                     src={profilePic}
                     className={styles.profileImg}
                     alt="web developer"
-                    height={400}
+                    height={410}
                     width={400}
                     layout="responsive"
                 />
 
                 <div className={styles.text}>
-                    <h2>Hi, my name is Ashikur</h2>
-                    <p>
+                    <h2 style={{margin: social && "0px"}}>Hi, my name is Ashikur</h2>
+                    <p >
                     As an accomplished MERN stack developer, I possess a profound understanding
                     of software architecture and database design.
                     </p>
-                    <p>
+                    <p style={{margin: social && "-10px 0px"}}>
                     My strong drive for learning and adapting to new technologies has enabled me to
                     stay up-to-date with the latest trends and continuously improve my skills.
                     </p>
@@ -45,12 +46,18 @@ function AboutMe({pt, social}) {
                     </ul>
 
                     {social && (
-                        <div style={{paddingTop: '5px'}}>
-                        <p>Socials: </p>
+                        <div style={{paddingTop: '0px'}}>
+                        <p style={{margin: social && "0px 0px 5px"}}>Socials: </p>
                             <SocialIcon />
                         </div>
                     )}
+
+                    <div className={styles.resume_btn}>
+                        <a href={resume} download="AshikurFull-stack.pdf">Download Resume</a>
+                    </div>
                 </div>
+
+               
             </div>
         </div>
     );

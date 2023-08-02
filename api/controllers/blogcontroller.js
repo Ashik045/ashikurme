@@ -24,9 +24,9 @@ const gelAllBlogs = async (req, res) => {
     let blogs;
     try {
         if (tag) {
-            blogs = await BlogModel.find({ tag });
+            blogs = await BlogModel.find({ tag }).sort({ createdAt: -1 });
         } else {
-            blogs = await BlogModel.find();
+            blogs = await BlogModel.find().sort({ createdAt: -1 });
         }
 
         res.status(200).json({

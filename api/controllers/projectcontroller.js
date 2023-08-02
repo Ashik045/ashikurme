@@ -21,7 +21,7 @@ const createProject = async (req, res) => {
 // get all projects from database
 const getAllProjects = async (req, res) => {
     try {
-        const projects = await ProjectModel.find();
+        const projects = await ProjectModel.find().sort({ createdAt: -1 });
 
         res.status(200).json({
             message: projects,

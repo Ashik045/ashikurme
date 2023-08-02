@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: 48% 48%;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
 
     .profileImg {
       object-fit: cover;
@@ -47,6 +47,22 @@
 
         li {
           margin-bottom: 3px;
+        }
+      }
+
+      .resume_btn {
+        padding: 8px 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        background-color: #64ffda;
+        border-radius: 5px;
+        margin-top: 15px;
+        a {
+          color: black;
+          font-weight: 500;
+          text-transform: uppercase;
         }
       }
     }
