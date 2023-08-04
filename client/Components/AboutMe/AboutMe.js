@@ -33,11 +33,11 @@ function AboutMe({pt, social}) {
 
                     <p className={styles.expertise}>Among my areas of expertise are:</p>
                     <ul>
-                        <li>Next.js</li>
+                        <li>Next.Js</li>
                         <li>React Js</li>
                         <li>TypeScript</li>
                         <li>Javascript</li>
-                        <li>Node.js</li>
+                        <li>Node.Js</li>
                         <li>MongoDB</li>
                         <li>CSS3</li>
                         <li>SASS</li>
