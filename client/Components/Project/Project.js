@@ -24,7 +24,7 @@ const Project = ({project}) => {
                     </span>
 
                     <p className={styles.project_detail}>{project.detail}</p>
-                    <p className={styles.r_t_l_tools}>
+                    <p className={styles.l_t_r_tools}>
                         {project.tools.slice(0, 5).map((tool, i) => {
                             return <span key={i}>{tool},</span>
                         })}

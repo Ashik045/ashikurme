@@ -8,6 +8,7 @@ import Header from '../Components/Header/Header';
 import Navbar from '../Components/Navbar/Navbar';
 import Projects from '../Components/Projects/Projects';
 import Services from '../Components/Services/Services';
+import Skills from '../Components/Skills/Skills';
 
 export default function Home({projects, blogs}) {
 
@@ -23,6 +24,7 @@ export default function Home({projects, blogs}) {
                     <Navbar />
                     <Header />
                     <AboutMe />
+                    <Skills />
                     <Projects projects={projects} />
                     <Services />
                     <Blogs blogs={blogs} />

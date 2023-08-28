@@ -1,4 +1,6 @@
 .projectt {
+  box-sizing: border-box;
+  overflow: hidden;
   .icon {
     margin-right: 7px;
     cursor: pointer;
@@ -62,8 +64,9 @@
         -webkit-box-orient: vertical;
       }
 
-      .r_t_l_tools {
+      .l_t_r_tools {
         color: #64ffda;
+        word-break: break-all;
 
         span {
           margin-right: 5px;
@@ -119,7 +122,9 @@
 
       .r_t_l_tools {
         color: #64ffda;
-        text-align: right;
+        // text-align: right;
+        // margin-left: auto;
+        word-break: break-all;
 
         span {
           margin-right: 5px;

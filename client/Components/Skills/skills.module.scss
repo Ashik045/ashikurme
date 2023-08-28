@@ -1,0 +1,199 @@
+.skills_sec {
+  background-color: #0a192f;
+  overflow: hidden;
+
+  .main_sec {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: -20px;
+
+    .icons {
+      width: 95%;
+      margin-left: auto;
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-gap: 20px;
+      margin-bottom: 30px;
+
+      .icon_div {
+        display: flex;
+        align-items: center;
+
+        .typescript {
+          border-radius: 50%;
+          margin-right: 5px;
+        }
+
+        .reactjs {
+          background-color: #5adafd;
+          padding: 5px;
+          border-radius: 50%;
+          margin-right: 7px;
+        }
+
+        .nextjs {
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          margin-right: 7px;
+        }
+
+        .css {
+          margin-right: 7px;
+        }
+
+        .html {
+          margin-right: 7px;
+        }
+
+        .bootstap {
+          margin-right: 7px;
+        }
+
+        .mui {
+          margin-right: 7px;
+        }
+
+        .node {
+          margin-right: 7px;
+        }
+
+        .express {
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          margin-right: 7px;
+        }
+
+        .mongodb {
+          background-color: rgb(41, 40, 40);
+          padding: 1px;
+          border-radius: 50%;
+          margin-right: 7px;
+        }
+
+        h3 {
+          color: #ccd6f6;
+        }
+      }
+    }
+
+    .others {
+      width: 95%;
+      margin-left: auto;
+      h2 {
+        color: #ccd6f6;
+        margin-bottom: 5px;
+      }
+
+      .other_icons {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-gap: 20px;
+
+        .other_icon_div {
+          display: flex;
+          align-items: center;
+
+          .round {
+            background-color: white;
+            padding: 5px;
+            border-radius: 50%;
+          }
+
+          // .ot_icon {
+          //   background-color: white;
+          //   border-radius: 50%;
+          //   overflow-x: hidden;
+          // }
+
+          h3 {
+            color: #ccd6f6;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .skills_sec {
+    .main_sec {
+      .icons {
+        width: 97%;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-gap: 14px;
+      }
+
+      .others {
+        width: 97%;
+        .other_icons {
+          display: grid;
+          grid-template-columns: 25% 25% 25% 25%;
+          grid-gap: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skills_sec {
+    .main_sec {
+      .icons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        grid-gap: 10px;
+
+        .icon_div {
+          .javascript {
+            height: 45px;
+            width: 45px;
+          }
+          .skill_icons {
+            height: 35px;
+            width: 35px;
+          }
+
+          h3 {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .others {
+        width: 100%;
+
+        .other_icons {
+          display: grid;
+          grid-template-columns: 32% 32% 32%;
+          grid-gap: 10px;
+
+          .other_icon_div {
+            .round {
+              height: 35px;
+              width: 35px;
+            }
+
+            .ot_icon {
+              height: 35px;
+              width: 35px;
+            }
+
+            h3 {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

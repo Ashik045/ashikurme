@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import resume from '../../images/AshikurFull-stack.pdf';
+import resume from '../../images/Ashikur.pdf';
 import profilePic from '../../images/up-dp-removebg-preview (3).jpg';
 import HeaderTitle from '../HeaderTitle/HeaderTitle';
 import SocialIcon from '../SocialIcon/SocialIcon';
@@ -23,12 +23,14 @@ function AboutMe({pt, social}) {
                 <div className={styles.text}>
                     <h2 style={{margin: social && "0px"}}>Hi, my name is Ashikur</h2>
                     <p >
-                    As an accomplished MERN stack developer, I possess a profound understanding
-                    of software architecture and database design.
+                    As a seasoned MERN stack developer, I possess a profound understanding of software
+                    architecture and database coordination. Proficient in NodeJS, MongoDB, JavaScript,
+                    TypeScript, ReactJS, and Next.JS.
+
                     </p>
                     <p style={{margin: social && "-10px 0px"}}>
-                    My strong drive for learning and adapting to new technologies has enabled me to
-                    stay up-to-date with the latest trends and continuously improve my skills.
+                    My strong drive for learning and adapting to new technologies has enabled me to stay
+                    up-to-date with the latest trends and continuously improve my skills.
                     </p>
 
                     <p className={styles.expertise}>Among my areas of expertise are:</p>
