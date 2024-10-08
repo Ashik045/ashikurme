@@ -7,6 +7,7 @@ import SocialIcon from '../SocialIcon/SocialIcon';
 import styles from './aboutme.module.scss';
 
 function AboutMe({pt, social}) {
+    // 
     return (
         <div className={styles.aboutme} style={{paddingTop: pt ? `${pt}` : '0px'}}> 
             <HeaderTitle title="About Me"  />
